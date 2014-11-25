@@ -1,0 +1,115 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FatFingerReport.aux
+The style file: plain.bst
+Database file #1: bibliography/mendeley.bib.bib
+Database file #2: bibliography/external.bib.bib
+Warning--I didn't find a database entry for "sec:resultsTaskCompletionTime"
+Name 1 in "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" has a comma at the end for entry ClarksonGVU
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1049 of file plain.bst
+Name 1 in "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" has a comma at the end for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1049 of file plain.bst
+Name 1 in "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" has a comma at the end for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cao, X., Wilson, A., Balakrishnan, R., Hinckley, K., and Hudson" for entry CaoShapeTouch
+while executing---line 1090 of file plain.bst
+Warning--empty booktitle in CaoShapeTouch
+Name 1 in "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" has a comma at the end for entry ClarksonGVU
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Clarkson, E.C., Patel, S., Pierce, J., and Abowd" for entry ClarksonGVU
+while executing---line 1090 of file plain.bst
+Warning--empty booktitle in ClarksonGVU
+Warning--empty title in touchID
+Warning--empty journal in touchID
+Warning--empty year in touchID
+Warning--empty title in coreData
+Warning--empty journal in coreData
+Warning--empty year in coreData
+Warning--empty title in iphone
+Warning--empty journal in iphone
+Warning--empty year in iphone
+Warning--empty title in wikiSwift
+Warning--empty journal in wikiSwift
+Warning--empty year in wikiSwift
+Warning--empty title in multiTouch
+Warning--empty journal in multiTouch
+Warning--empty year in multiTouch
+Warning--empty title in qwerty
+Warning--empty journal in qwerty
+Warning--empty year in qwerty
+Warning--empty title in anova
+Warning--empty journal in anova
+Warning--empty year in anova
+Warning--empty title in www
+Warning--empty journal in www
+Warning--empty year in www
+You've used 41 entries,
+            2118 wiz_defined-function locations,
+            755 strings with 12799 characters,
+and the built_in function-call counts, 16734 in all, are:
+= -- 1806
+> -- 599
+< -- 25
++ -- 236
+- -- 194
+* -- 1075
+:= -- 2512
+add.period$ -- 140
+call.type$ -- 41
+change.case$ -- 212
+chr.to.int$ -- 0
+cite$ -- 67
+duplicate$ -- 763
+empty$ -- 1331
+format.name$ -- 194
+if$ -- 3761
+int.to.chr$ -- 0
+int.to.str$ -- 41
+missing$ -- 41
+newline$ -- 200
+num.names$ -- 82
+pop$ -- 258
+preamble$ -- 1
+purify$ -- 179
+quote$ -- 0
+skip$ -- 613
+stack$ -- 0
+substring$ -- 1172
+swap$ -- 276
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 164
+warning$ -- 26
+while$ -- 165
+width$ -- 43
+write$ -- 492
+(There were 20 error messages)

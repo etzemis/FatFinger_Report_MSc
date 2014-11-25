@@ -1,0 +1,266 @@
+\section{Product Description}
+
+\subsection{Motivation,Final Product and User Stories}
+
+Out of the projects-case descriptions made available we chose to proceed with 2GoGopenhagen. 2GoCopenhagen has one specific mission: \emph{“To promote a global mindset \& make cities more interactive”}, which is influenced by the fact that we want the term "immigrant" – whether they are refugees, expats, students, or tourists - to be associated with positivity! Globalization is coming, so we should learn to live with each other and enjoy it! (\cite{2GoCPH}).
+
+The way to achieve that was by making both a web-based and a mobile-based application, that allows individuals to navigate and find integrated information in English that relates to 4 main features: Guide, Events, Offers and Articles (\cite{2GoCPH}).
+
+We chose this project because we found it innovative, evolutionary and challenging. Since we are international students we wanted to support a movement that goes towards the city-friendliness. When it is completed it will provide helpful information for the city of Copenhagen (and later for many other metropolitan areas) for students and new comers.
+
+Initially the software that we were supposed to work on was still under development. The 2GoCopenhagen team had no real specifications on the software tools needed to accomplish the project apart from the content they wanted to put on it. Even the Design process was under early development, and was constantly alternated. Under this unsafe environment we had to take some serious decisions on the framework and the web-technologies that we would use.
+
+When we joined the 2GoCopenhagen team we faced a very bad designed project and their new website that was supposed to replace the old one had not followed any of the guidelines that lead to simplicity, user-friendliness, and beautiful design. As a result on the first Sprint we decided to move to the Groovy\&Grails framework that would give us superior code-flexibility compared to the Drupal platform that was used before. Moreover the Designer team, also with our help in sprint 3, ended up on a new universal website design that we finally followed on our implementation.
+
+I should also mention that apart from the basic functionality, which includes that a person can find Events, Articles, Offers and Guides relative to Copenhagen; 2GoCopenhagen should also support Users, Payments and Comments. By that a mean, that a person should be able to sign up to the website, in order to access personalized content, instantly buy an Offer or  for instance comment-review an event. Of course, the project was huge for the scope of this course, however we managed to implement a big portion of it.
+
+The Final product contains a fully functional Event and Single Event Page, which incorporates all the design guidelines which are universal across all the pages. That means that the parts of our website are re-usable. Thus the rest of the pages (Articles, Offers, Guides) can be ready, with a rough estimate in about 2-3 weeks, by reusing the already existed code and functionality. At this point I should also mention that, we will continue working on this project, since the product owner was totally satisfied with our performance, and thus he decided to sign a internship contract with us.
+
+The following is a list of the most significant user stories, we have implemented.
+
+\begin{description}
+  \item[\emph{"A user should be able to access our website"}] \hfill \\
+  In its final version, 2GoCopenhagen should be accessible under the \emph{http://www.2gocopenhagen.com} domain,  which for now hosts the older version of the website. For the purpose of the demonstration website, we solved that by uploading the website in the following url \emph{http://gocopenhagen.devproject.cloudbees.net}. 
+  
+  \item[\emph{"A user should be able to efficiently access-use 2GoCopenhagen though Mobile Devices"}] \hfill \\
+  To achieve that "efficiently", we had to design a totally responsive layout for our website. We ended up having 4 different layouts (including the Desktop one) specifically designed for Desktop, Tablet - Portrait Orientation, Tablet - Landscape Orientation, Mobile phone (for screenshots check \verb|Appendix B|). In that way, a user can fully utilize the screen of the device he is using, to navigate fluently and harmlessly through the website.
+
+  \item[\emph{"As a user I want to easily find and navigate through Events, Offers, Articles and Guides"}] \hfill \\
+  This required a universal design for the website. In sprint \#3 we ended up on a design that would be as simple as possible, while keeping all the desired functionality. Thus a user can navigate through Events, Offers, Articles and Guides by clicking the corresponding circle-button on the top menu. Those buttons are always visible throughout the website and lead him to a page that has all the relevant information.
+  
+  \item[\emph{"As a user I want to be able to filter the content according to the Date / Category it belongs"}] 
+  To solve that we have the Category buttons on the left bar and an interactive calendar. The design is the same for all pages, and only the text in the buttons change, to correspond to the specified categories. We also added a sub-Category feature, which becomes available through a drop-down menu when clicking the small arrow next to the Category button.
+  
+  When the user presses either a Category/Sub-Category button or a date in the Calendar he is prompted with all the content that fulfills his criteria (e.g Events that belong to the "Music" category, "Concerts" Sub-Category  and will take place after the 11th of June 2014).
+  
+  \item[\emph{"As a user I want to see the information about an Event in a friendly way"}] \hfill \\ 
+  When a user clicks on an Event he is prompted with the Single Event Page. This page was designed in a universal - minimalistic way and provides information about Address, Telephone, Venue, Contact. It also provides a description of the Event and the Event's Rating, according to user Votes.
+  
+  \item[\emph{"As a user I want to see the location of the Event in an interactive map"}] \hfill \\
+  Instead of only showing the address of the Event, we embedded Google Maps into our Single Event page. The location of the event is pinned, and user should first click on the map to navigate through it.
+  
+  \item[\emph{"As a user I want to be updated on relevant information when I am browsing the site"}] \hfill \\
+  Relevant content is displayed on the Sidebars. This includes \verb|Recommended| (Ranked according to Rating), \verb|New Articles| (Newest added Articles), \verb|New Stuff| (Whatever is newest on the Website), \verb|New Offers| (), \verb|New Places| (it means new guides). It should be mentioned that this content is clickable, and it directs you to the corresponding Single-Content page. When we are on the Single Event Page, we have the addition of the \verb|Most Popular| (Ones that have been visited the most times). 
+  
+  \item[\emph{"As a user I wan to share an Event,Offer,Article,Guide to the Social Media"}]\hfill \\
+  We implemented the connection with Facebook, Twitter and Google+. So a user can press their favorite social button and after logging in to his account, he can instantly share the content of the website. The corresponding Buttons have not been added yet, so this story has not been completely finished.
+\end{description}
+
+
+
+
+\subsection{Quality Requirements}
+
+Bellow I illustrate the main quality requirements of \emph{2GoCopenhagen} in the form of quality attribute scenarios, categorized into 6 main groups. 
+
+\begin{description}
+  \item[\emph{Availability}] \hfill \\
+  \emph{"A User Creates an event with a non-existing address. Geocoding Service will be used and is under Normal Operation. It will detect the error inform the user that the address was wrong and continue to operate normally."}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/availability.png}
+  	\caption{Availability - Quality Attribute Scenario}
+  	\label{availability}
+  \end{figure}
+  
+  \item[\emph{Modifiability}] \hfill \\
+  \emph{"A developer wishes to change the color of the Category Buttons. This change will be made at the code on implementation time. It will take around 1.5 hours and no side effects will occur."}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/modifiability.png}
+  	\caption{Modifiability - Quality Attribute Scenario}
+  	\label{modifiability}
+  \end{figure}
+  
+  \item[\emph{Performance}] \hfill \\
+  \emph{"Users initiate 300 requests per minute stochastically under normal operation, to access the Events page. These requests are processed by the System with a maximum latency of around 3 seconds."}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/performance.png}
+  	\caption{Performance - Quality Attribute Scenario}
+  	\label{performance}
+  \end{figure}
+  
+  \item[\emph{Security}] \hfill \\
+  \emph{"An Un-Authorized user tries to edit the Data of an Event. System maintains audit Trail, and user should first be authorized. Correct data is restored immediately if needed."}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/security.png}
+  	\caption{Security - Quality Attribute Scenario}
+  	\label{security}
+  \end{figure}
+  
+  \item[\emph{Testability}] \hfill \\
+  \emph{"A Unit tester performs a unit Test to an under development system component, which is controllable and his output is observable. 60\% path coverage is achieved in 2 Hours."}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/testability.png}
+  	\caption{Testability - Quality Attribute Scenario}
+  	\label{testability}
+  \end{figure}
+  
+  \item[\emph{Usability}] \hfill \\
+  \emph{"A user wishing to use the system efficiently, wants to filter the Events, according to some Criteria (Category-Date) at runtime. He has the filtered Events in less than a second"}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=130mm]{images/usability.png}
+  	\caption{Usability - Quality Attribute Scenario}
+  	\label{usability}
+  \end{figure}
+  
+
+\end{description}
+
+\subsubsection{Discussion}
+
+Testing the quality requirements is not something trivial to achieve, neither unfeasible though. Regarding \verb|Availability| requirement (Figure \ref{availability}) we have not implemented any specific Tests. However we check if we have receives an error Code when we search the Coordinates of an Address through the Google Geocoding API. Automated tests can be created, which will fire many clients that will create Events with incorrect addresses. We have to check the messages we get back, and if the server will stay available during this whole test. For the \verb|Modifiability| requirement (Figure \ref{modifiability})  we have not implemented any test, and I do not think  that automated tests can exist for this case. However we faced this situation twice in our project (change colors of Category buttons), and indeed we did not exceed the time limit, neither this change affected the rest of the code. \verb|Performance| requirement (Figure \ref{performance}) can easily be tested using automated tests. A small script that will open a browser, browse for the Events page URL and count the response time would be sufficient. Then we would just need to run this script 300 concurrently and check whether the requirement holds. Finally for the \verb|Testability| requirement (Figure \ref{testability}), we have not implemented any test and I do not think that automated can exist for that case. The only way to help a Unit Tester write full coverage tests in that short time is to write code that is well structured, fully documented and commented.
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%  Architectural Description
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+\subsection{Architectural Description}
+
+The architecture of the final product is described using the theory of \cite{Christensen} and is based on the architecture description handed in as part of Deliverable 6: Sprint \#5. 
+\subsubsection{Context}
+ The Context View, which is presented in Figure \ref{contextView}, shows how our website interacts with its surroundings.
+ As we can see we have three major components:
+ 
+\begin{itemize}
+	\item \verb|Users of the System|. The Users interact with the Website. We have three different types of users. \verb|Admin| which has the administrator rights on the site, \verb|Registered|, which is one that has signed up on the website and finally the \verb|Un-Registered| which is just a user that can only surf in our website and has the least privileges on it.
+	\item \verb|<<Internal>> 2GoCopenhagen| which is actual the system that is running and it also communicates with the external systems described bellow.
+	\item \verb|<<External>> Systems|. We have the Social Media APIs which contains the Facebook, Twitter and Google+ login APIs. Google Geocoding API is used for retrieving information on a specific address. Google Maps API is used for displaying a map on the website. Finally 2GoCopenhagen uses an external Payment API which is used for payment completion.
+\end{itemize}	 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=170mm]{images/context.png}
+	\caption{Context View of 2GoCopenhagen}
+	\label{contextView}
+\end{figure}
+\pagebreak
+
+
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+\subsubsection{Module Viewpoint}
+Module viewpoint is concerned with how the functionality is mapped to the units of implementation. 
+The 2GoCopenhagen Package, Figure \ref{moduleView1}, includes 5 packages. Those are placed hierarchically. On top we have the \verb|Views| and \verb|Taglib| which in cooperation compose the View Layer of 2GoCopenhagen. Then we have \verb|Controller| and \verb|Service| and finally, the \verb|Domain Model| Package. 2GoCopenhagen also depends on the external com.cph.GoogleMapsAPI, com.cph.SocialMediaAPI, com.cph.GeoCodingAPI in order to accomplish various tasks. As we can observe \verb|Views| use com.cph.GoogleMapsAPI to display a map, while \verb|Service| communicates with the other external packages by requesting information from them.   
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=170mm]{images/1Module_2GoCopenhagen.png}
+	\caption{Module ViewPoint of 2GoCopenhagen}
+	\label{moduleView1}
+\end{figure}
+
+
+We now de-compose \verb|Domain Model| package, as shown in Figure \ref{moduleView2}, which handles the objects we store in our database.
+\begin{itemize}
+	\item \verb|Users| keeps track of information about the user.
+	\item \verb|Content| keeps track of all the content appears in the website, like Events, Offers, Articles and Guides. Each \verb|Content| is associated with the user that created it.
+	\item \verb|Payment| keeps track of all the Payments that have taken place. Each payment is associated with a \verb|User| and a \verb|Content|.
+	\item \verb|Comments| keeps of Comments that a \verb|User| did on a \verb|Content|.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=110mm]{images/2Module_Domain_Decomposition.png}
+	\caption{Decomposition of the Domain Model}
+	\label{moduleView2}
+\end{figure}
+
+We further de-compose Content as we see in Figure \ref{moduleView3}. As we can see we have a basic class \verb|Content| which contains some information \emph|title,DateCreated,Rating,Description| that are common for everything that is displayed in the Website. Then we have \verb|Event|, \verb|Article|, \verb|Offer| and \verb|Guide| classes which all inherit from \verb|Content| and each of them add specific fields that they respectively need. 
+
+Then we have a relationship with User which is one-to-many meaning that a User can create many Content(any out of 4 kinds), while a Content is created by only one User. Moreover we have \verb|Category| (Music, Arts-Calture, Sports) and \verb|CategoryType|. One Category can have many CategoryTypes, e.g. Music can have concert, jazz, classic as CategoryType. Finally we say that each Content belongs to only one Category and only one corresponding CategoryType.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=110mm]{images/3Module_WebPageContent_Decomposition.png}
+	\caption{Decomposition of the Content Package}
+	\label{moduleView3}
+\end{figure}
+
+
+
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+
+
+\subsubsection{Component and Connectors Viewpoint}
+
+The component and connector diagram, shown in Figure \ref{cc1}, shows the runtime functionality of the application’s components and interaction between them.
+
+\begin{itemize}
+		\item \verb|User Interface| contains what is being shown to the User. A user makes a request to the Server and gets back an HTML file to interact though his Browser.
+		\item \verb|Views| contains all the possible Views that can be rendered to HTML files.
+		\item \verb|Controller| Responsible for rendering the Views, accessing the Domain Model and communicating with the User Interface. 
+		\item \verb|Model| contains the classes of our Database. Interacts with the Database through GDBC.
+		\item \verb|Database| Contains the data of our Project.
+		\item \verb|Google Geocoding API| Responsible for Finding Coordinates of a specific address.
+		\item \verb|Google Maps API| Responsible for displaying a Map on a View.
+		\item \verb|Payment| Responsible for secure Payment completion. This is why the protocol is HTTPs.
+		\item \verb|Social Media API| Responsible for Logging-in to Facebook, Twitter or Google+ and then sharing a URL.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=160mm]{images/cANDc0.png}
+	\caption{Components and Connector ViewPoint of 2GoCopenhagen}
+	\label{cc1}
+\end{figure}
+
+The sequence diagram, Figure \ref{cc2}, shows the communication between components when a User after filling the new-Event form, presses the \verb|Save Event| button. When the button is clicked User Interface performs an AJAX call to  "Save New Event" action of the Event-Controller, which in turn invokes the Geocoding service by suppling it with the address of the Event. Geocoding Service now connects to Google Geocoding Service and gets back an XML file with all relevant information for this specific address. After parsing them informs the Event Controller of the event coordinates. Then Event Controllers saves the event in the Domain Model and gets the corresponding view (Success/Error) from Views, and displays it to the User Interface.
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=160mm]{images/cANDc1.png}
+	\caption{Save newly created Event after Finding Geocoding information - Sequence Diagram}
+	\label{cc2}
+\end{figure}
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+
+\subsubsection{Allocation Viewpoint}
+
+The allocation view shows how software elements are mapped to platform elements. 
+As we can observe in Figure \ref{allocView} we have three major components: \verb|2GoCopenhagen Client|, \verb|2GoCopenhagen Server| and \verb|External Servers|.
+\begin{itemize}
+	\item \verb|2GoCopenhagen Client| runs on a Web Browser connects with our Server using the HTTP protocol.
+	\item \verb|2GoCopenhagen Server| runs on Cloudbees and uses the Grails MVC frameWork.
+	\item \verb|Google Server| runs on Linux OS and is responsible for the Geocoding and Map operations. Connection is achieved using HTTP protocol.
+	\item \verb|Payment Provider Server| is responsible for the completion of the Payments. As we have not ended up on the provider, we assume that the connection Protocol will be HTTPs (secure) to force security on the transaction and the information transferred. 
+	\item \verb|Facebook-Twitter-Google+ Server| are responsible for logging in to the corresponding social media. They run on Linux OS and connection protocol is HTTTP.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=160mm]{images/allocation.png}
+	\caption{Allocation ViewPoint of 2GoCopenhagen}
+	\label{allocView}
+\end{figure}
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+\subsubsection{Discussion}
+\emph{To which extend the software architecture description of a product can be connected with the quality requirements and whether they are fulfilled or not?}
+
+Considering the above question we need to think that systems are usually redesigned because they are becoming cumbersome to maintain or scale and not because they are functionally deficient (\cite{BassQuality}). Architecture is the first place in which quality requirements can be addressed, which means that the quality of system's architecture is strongly connected with the system's level of quality. However, architecture itself is unable to achieve qualities, but it provides the necessary infrastructure to build upon. For instance, consider the \verb|Testability| requirement (Figure \ref{testability}), which says that a user that is not authorized is not able to "edit" the data of an Event. Now consider also Figure \ref{moduleView3} which -among others- associates a User with an Event (or Content). In that way it can be inferred that an Event has been created by one User, and it can possibly be edited only by him. So the architecture give us an idea on how the privacy is working and brings us one step closer to evaluate if the \verb|Testability| requirement is fulfilled. We can work in the same way for most of the requirements, which will lead us to the aforementioned statement: \emph{"Architecture itself is unable to achieve qualities, but it provides the necessary infrastructure to build upon and head towards the fulfillment of them"}.

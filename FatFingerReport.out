@@ -1,0 +1,48 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{2D Interaction Techniques Evolution}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Fat Finger \046 3D Interaction Techniques}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Thesis Structure}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Pressure on Mobile Devices}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Contact Shapes and Simulated Pressure as source of input}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{New Mobile Interaction approaches}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Fat Finger establishment}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Fat Finger Concept}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Idea - Target}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{Scientific Research Questions addressed by Fat Finger}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Fat Finger Application Description}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.1.1}{Basic WorkFlow}{section.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.1.2}{Basic Design of a Trial}{section.4.1}% 17
+\BOOKMARK [1][-]{section.4.2}{Trial Categories}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.2.1}{Feedback \046 Discrete Targeting}{section.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.2.2}{Feedback \046 Continuous Targeting}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.3}{No Feedback \046 Discrete Targeting}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.4}{No Feedback \046 Continuous Targeting}{section.4.2}% 22
+\BOOKMARK [1][-]{section.4.3}{Final Sequence of Trials}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.4}{Data Manipulation}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.4.1}{Monitoring}{section.4.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.2}{Exporting}{section.4.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Experiment - User Study}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Experiment's Procedure}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.1.1}{Verbal Instructions}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.2}{Demographic Information}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.3}{Calibration}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.4}{Assessment}{section.5.1}% 32
+\BOOKMARK [1][-]{section.5.2}{Participants}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.3}{Hypotheses}{chapter.5}% 34
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 35
+\BOOKMARK [1][-]{section.6.1}{Task Completion Time}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.2}{Offsets}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.3}{Learning Curve}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.3.1}{Total Time}{section.6.3}% 39
+\BOOKMARK [2][-]{subsection.6.3.2}{Offset}{section.6.3}% 40
+\BOOKMARK [1][-]{section.6.4}{Re-Entries}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.5}{Re-Touches}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.6}{Subjective Preferences}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 44
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 45
+\BOOKMARK [0][-]{appendix.A}{Verbal Istructions of Experiment}{}% 46
+\BOOKMARK [0][-]{appendix.B}{Demographic Information Form}{}% 47
+\BOOKMARK [0][-]{appendix.C}{Technique Assessment Form}{}% 48

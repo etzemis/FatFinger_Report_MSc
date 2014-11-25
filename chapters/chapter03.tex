@@ -1,0 +1,92 @@
+
+This fairly short chapter presents the original idea behind Fat Finger interaction technique, along with the way we conceptualized its usage and finally the main research questions that this study will try to respond to. Being motivated from the current condition, environment and facts as described in Chapter 1, we searched and then presented the relevant bibliography in Chapter 2. This helped us to understand what other researchers have already achieved in the same, or closely related fields. Moreover, among the papers, we encountered many different approaches on how to implement, test and evaluate an idea, which we used to build a robust and coherent experiment capable to provide us with the necessary tools to study Fat Finger interaction technique. The following sections present the theoretical part of this study, and more specifically, the original idea and the theoretical questions we will try to debate and reason on.
+
+\section{Idea - Target}
+In my thesis proposal, I stated the following (Quoting):
+
+------------
+
+I am proposing the \emph{Fat Finger interaction technique} which uses a finger's contact size as a form of simulated pressure. This adds a degree of freedom, which could later be used to integrate multi-finger drag gestures into a single fluid interaction, or just enhance the current ways we interact with tablet or mobile devices. In order to achieve that, we should find a way of interacting with the iPad using only our finger, while its contact size is going to give us the flexibility we want. In terms of goals, we want to exploit the expressiveness of the touch motion, by giving more meanings to it apart from just being a boolean motion --- touch or no-touch. Therefore the main question that our thesis will try to answer is:
+
+\emph{"To which extend are we able to distinguish the different simulated pressure levels produced by our fingers using a tablet device?"}
+
+In terms of methodology I am going to specify my approach on dealing with the above research question. We should also consider that we are not limiting the research on one finger interaction, but we also want to study multi-finger gestures, always combined with the finger contact size.
+
+
+\begin{itemize}
+    \item \emph{\textbf{How many contact-size levels are we able to determine?}}
+
+     We know that one level is straightforward, but what happens then? First we need some kind of calibration with the user's finger ---possibly one calibration per different finger--- to determine the smallest and the biggest possible contact size. Then we want to divide this difference into N segments. Sub-target of this study is to determine how much this N can grow up, while keeping its expressiveness. The upper goal is to reach 16 different distinguishable pressure levels.
+
+    \item \emph{\textbf{How can we test that the N levels we managed to determine are useful and distinguishable by the user?}}
+
+    To determine whether the levels are all distinguishable by the users we are going to use the following test structure (Figure 1), with possible variations. We divide the contact size area in N segments and then force the user to match a specific ---levelled--- contact size. Two N-scaled columns are provided; one with the target contact-size (left) and another with our current contact-size (right). The contact size feedback indicator is growing up meaning that bigger contact sizes are higher in the column.
+
+    \item \emph{\textbf{What about a multi finger combination?}}
+
+    We would like to increase the expressiveness of a multi finger gesture using each finger's contact size. Testing can be performed in the same way. The aim, again, is reaching the specified contact-size, either by taking the average contact area of the fingers used or by introducing a new column for each finger.
+\end{itemize}
+
+------------
+
+As we can see, the main target of this study is to understand how touch and simulated pressure works, under our specific point of view. We want to investigate the capabilities and the precision when we use the contact area of the index finger of our dominant hand to interact with a tablet device. However, after having understood that, our utter target is to utilize and combine Fat Finger interaction technique with already existing gestures used for current interaction with mobile devices. 
+That way, it will become possible to exploit its capabilities and see how it performs in real life use and in combination with the already existed gestures currently provided by Apple iOS, Google Android and Microsoft Windows mobile operating system.
+Also, of great importance is the use of multi-finger combination alongside with the use of the contact size provided by those operating systems. For example, a different action could be performed in a three finger drag gesture depending on how hard we touch the screen. 
+Of course, the learning curve of such techniques would be steeper. However this could be leveraged by the advantages we could gain. Despite how tempting this technique might seem, it goes beyond the sphere of this study and maybe it can be explored in a later study - future work. 
+First we need to fully understand "one-finger interaction", which we decided to be our \textbf{index finger} of our \textbf{dominant hand}, and then move to higher complexity levels (more than one finger at the same time).
+Thus, this study focuses only in studying how index-finger interaction through contact-size or simulated pressure behaves on mobile tablet devices. Multi finger interaction technique would be a great attribute that would enhance the current ways we use to interact with tablet devices, but as we already mentioned it is beyond the scope of this study.
+In this study we focus on understanding the capabilities of users in using the contact size area to perform target acquisition tasks. In section \ref{sec:FFResearchQuestions} we present the basic research questions that we will try to reason on in this study.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scientific Research Questions addressed by Fat Finger}
+\label{sec:FFResearchQuestions}
+
+This sections presents the scientific research questions addressed by Fat Finger. For each of them, we shortly explain the concept and a glance of the methodology we will use in our effort to provide clues, facts and results in the corresponding questions.
+To study and test Fat Finger interaction technique we designed an experiment in the form of target selection trials. Implementation of the corresponding software is described in Chapter \ref{sec:Implementation}, while the user study in Chapter \ref{sec:Experiment}. Below we present the research questions that this study will try to respond to.
+
+\begin{itemize}
+    \item \emph{\textbf{Q1: How many discrete pressure levels are we able to distinguish when using the index finger to interact with a tablet device?}}
+
+    It is really important to define the limits for the maximum number of Discrete pressure levels that users can distinguish. It is a metric of the quality of the source of input. We therefore need to test a wide range of pressure levels and check in which of them the error rates are small enough to allow fluid operations. In this user study we will be investigating a range from 2 to 16 pressure levels. 
+    Our target is to define an upper limit for pressure levels, after which, input will be prone to errors. Higher values for pressure levels, infer that Fat Finger interaction technique is accurate enough, meaning that users are able to provide precise n-level pressure input on the tablet device.
+
+    \item \emph{\textbf{Q2: How the size of the target region influences overall performance?}}
+
+    This research question is highly related to \textbf{Q1}, since the number of Pressure levels varies inversely as the size of the target. When the number of pressure levels increases, each level represents fewer pressure values (shorter range). When aggregated pressure levels should add up to the total pressure range. In other words, we try to fit different number of pressure levels in the same pressure range.
+
+    \item \emph{\textbf{Q3: In which region is our finger more capable to operate on? Smaller or larger contact sizes?}}
+
+    We will try to reason in which level of pressure we are more capable to operate. Since pressure is related to contact size, and contact size can mainly altered by changing the posture-position of our hand; we need to investigate whether the position and physical ergonomic construction of our hand has anything to do with precision and so on.
+
+    \item \emph{\textbf{Q4: Which is the role visual Feedback? To which extend it affects the performance?}}
+
+    Feedback is an inseparable aspect of most (if not all) interaction techniques in HCI (Human Computer Interaction). For instance, when we move the mouse we get feedback through the movement of the cursor on the screen. What would happen if there were no cursor indicating the position of the mouse or even if the cursor would only appear frequently (partial feedback), and not always (full feedback). Our interaction with PCs would be much more difficult, right?
+    We do need to investigate this behaviour in Fat finger and observe how feedback is influencing the performance of users on relevant selection tasks.
+
+
+    \item \emph{\textbf{Q5: What is the differences among the target selection techniques? How they affect performance?}}
+
+    Fat Finger interaction technique is designed to enhance the interaction with tablet devices. Thus, it is very important to be able to perform target selection tasks. For instance, when we use a simple mouse device, we perform selections by clicking. Generally buttons are a very attractive alternative to perform selections after you have been positioned inside the target. However, in Touch input we need to seek for button alternatives, and indeed in our study we will be selecting targets either by using delay or lifting.
+
+
+    \item \emph{\textbf{Q6: Does training in Fat Finger affect performance? Which is the Learning Curve?}}
+
+    We would like to develop a study in which we will measure the effort required to learn and get used to Fat Finger interaction technique.
+    To achieve that, the Training Face can not be separated from the actual experiment. If we train users during the experiment procedure, we should be able to apply metrics to capture and monitor their performance.
+    A technique whose learning curve is not steep, would be definitely preferred by users. As we will see in Chapters \ref{sec:Implementation}, \ref{sec:Experiment} and \ref{sec:Results}, we will combine training phase with the rest of the experiment, which will give us the ability to study and then export results regarding the learning behaviour of users.
+
+    \item \emph{\textbf{Q7: In which detail are users capable to develop haptic memory on various pressure levels? Is it even possible?}}
+
+    Haptic memory is introduced mostly when there is not Visual Feedback. In that occasion users tend to develop haptic memory, which assists them in selecting the desired targets. Haptic memory is of major importance and can vastly improve user performance; especially when they have already memorized the movements but they are also provided with feedback.  
+
+\end{itemize}
+
+Taking into account the above research questions, we build a User study that will help us to provide evidence and appropriate data which will give answers to them. Specifically, on chapter \ref{sec:Results} we present the results we collected, while on Chapter \ref{sec:Discussion} we discuss the results and we try to respond to the aforementioned questions.
+

@@ -1,0 +1,125 @@
+\	section{Development Process}
+
+\subsection{Process Overview}
+
+The Overview of our process is given below, by following the "Cooperative Experimental System Development" (CESD) approach as described in Gronbaek et al. framework \cite{CESD}.
+CESD approach is characterized by its focus on: active user involvement throughout the entire development process; prototyping experiments closely coupled to work-situations and use-scenarios; transforming results from early cooperative analysis/design to targeted object oriented design, specification, and realization; and design for tailor-ability (\cite{CESD}). In CESD it is vital to separate Concerns from Activities. However, it provides a framework to relate them in a way that concrete activities contribute to several concerns, and vise versa; one concern is realized through a number of activities. 
+Taking into account that Activities are concrete actions, I chose the SCRUM process activities to represent activities on the CESD framework. From the analysis that follows it can be inferred that our work flow followed the principles of CESD. To be more precise, we tried to involve users in all phases of the development. We followed techniques referred in \cite{CESD}. In sprint \#2 we run a questionnaire to collect information about the design we should follow in our website. In sprint \#3 we created Mock-ups for the design of the website. Finally, a prototype was launched during sprint \#4 which contained the basic functionality of the Events pages, and navigation through the site. The following table shows the relationships between Activities and Concerns. Activity frequency is represented by numbers 0 to 4, meaning the higher the number the more the concern was part of the activity. The details of each activity are outlined afterwards.
+
+\resizebox{16cm}{!} {
+		\begin{tabular}{l || c|c|c|c|c|c}
+			Activity / Concern & Management & Analysis  & Design & Realization & Computer-Sup Work \\
+			\hline \hline 
+			Tools Setup-Installation	&4	&1	&1	&2	&0 	\\ 
+			Features Brainstorming		&0	&4	&3	&0	&0	\\
+			Review-Planning Meeting 	&3	&2	&2	&1	&0	\\
+			Update  Meeting				&2	&0	&1	&1	&0	\\
+			Task Estimation				&1	&4	&1	&0	&0	\\
+			Task Delegation				&4	&2	&0	&0	&0	\\
+			Daily Scrum					&2	&0	&0	&0	&0	\\
+			Development					&1	&2	&4	&4	&1	\\
+			Testing						&0	&2	&2	&3	&0	\\
+			Demo Preparation			&1	&1	&0	&0	&0	\\
+			Class Demo Presentation		&2	&0	&0	&0	&0	\\
+			Retrospective				&2	&1	&0	&0	&0	\\
+		\end{tabular}
+}
+
+
+\begin{description}
+  \item[Tools Setup-Installation] \hfill \\
+  This consisted of some activities including configuration of GITHub, Jenkins\&Cloudbees, Groovy\&Grails, and the backlog. The most significant factor we had to decide on was the framework we were going to use for the website development. When we joined the team, 2GoCopenhagen were using Drupal to build their new website, with which we also commenced. However during the 1st sprint we decided that in order to meet  Product owner's requirements we need a much more customizable framework to work on. Thus after some meetings we ended up on Groovy\&Grails, which intern we had to install in our machines.
+ 
+\verb|Jenkins| proved difficult to set up and get it to work properly and thus setting this up leaked into the first two(2) sprints. After much research we ended up using \verb|Cloudbees| which was the only available free tool that had support for Grails projects. Cloudbees draws and builds the project from a Git repository. However we could not sync it with our Github repository, so we ended up using both of them in a way.
+
+Concerning \textbf{Github} I present our explanation from Sprint 5 deliverable: In Sprints 1, 2 and 3 we worked on https://github.com/vchudinov/2gocopenhagen.git repository using  2 branches. The master branch for our development team and the users branch that was used by 2GoCopenhagen developer Team.
+In Sprint 4 and 5 we moved in a new private repository owned by a member of our team. It is under the following link and has the same structure as the previous one. https://github.com/etzemis/2GOCPH.git. 
+
+In this point it should be mentioned that our Cloudbees account was updated in the end of each Sprint and only after our work was reviewed. In the beginning we deployed a Cloudbees application that we used until the end of Sprint 3. In Sprint 4 we moved to another application after facing various issues with the old one. 
+Finally, concerning the \textbf{Backlog} we decided to use \textbf{Acunote} to keep track of tasks and project progress. It proved to be efficient and provided us finer control and automatically generated progress charts.
+   
+  \item[Features Brainstorming] \hfill \\
+  The project was not well established from the beginning. Product Owner had the idea and a basic structure, but the rest were quite experimental. Thus in the meetings 
+  with the product owner in the beginning of each sprint we had sort or sometimes longer (Sprint \#3) brainstorming sessions. In those we discussed : design issues, functionalities, possible add-ons, social media interaction and so on. 
+  
+  \item[Review-Planning Meeting] \hfill \\
+  The planning meeting was taking place in the beginning of Each sprint, and was between us, the product owner and sometimes the rest 2GoCopenhagen development team.
+  In the beginning we were demoing the product for the previous sprint, and then we had the sprint review. This was great for motivation, progress reporting, and feedback. It helped us to manage our progress and realize the product owner’s visions. After finishing previous sprint discussion, we were moving to the new sprint. Now the conversation included discussion on new user stories and what needed to be implemented. Splitting user stories into smaller tasks, Task Estimation and Task delegation we taking place after this meeting as I will later explain. Finally, the meeting also included setting dates for the "Update Meeting" as described below and the next "Review-Planning meeting".
+  
+  \item[Update  Meeting] \hfill \\
+  This meeting dedicated to keep Product Owner updated on our work and progress. It was taking place in the middle of each sprint (usually 1 and a half week after the start of each sprint). We were also discussing on how things are going through this sprint, and whether a re-planning was needed. In sprint \#5  for example we changed our sprint goal after an in-depth discussion we had with the Product Owner. We realized that we needed to finish other things prior to moving to new fields.
+  
+  \item[Task Estimation] \hfill \\
+  Task Estimation was done after splitting User Stories into smaller tasks (in Daily meetings). It always happened the next two days of the "Review-Planning Meeting", alongside with Task Delegation. This procedure also explains why we have a stable horizontal line in the beginning of each sprint (check Burn-Down charts). Regarding Task Estimation, we did not use playing Cards as suggested in \cite{HenrikScrum}. In the beginning we found it really difficult to come up with representative estimates, bus as we familiarized with both Grails and the project needs, the quality of our estimates improved.
+  
+  \item[Task Delegation] \hfill \\
+  This was also part of the 2 following days of the Meeting. Each member should have been assigned a task, and should select a new one from the backlog when he has completed the previous one. It should be mentioned that especially on the first two sprints we were working in small groups 2 by 2. We did that to overcome the difficulties we were facing with Grails, which at that time we were all unfamiliar with. 
+  
+  \item[Daily Scrum] \hfill \\
+  In \cite{SchwaberScrumGuide} it is said that SCRUM meetings should occur every day. However Dimosthenis instructed us that for the amount of work we had to devote to the project, one meeting per two days was sufficient. The idea of keeping the development team in sync is appealing, thus we managed actually do those meetings even in daily basis sometimes. We were usually gathering together in one place, or Skype-ing when we had other things to do. Since there were many times we worked all together in the same place, but possibly in different workstations, it was straightforward for us to do the Daily meeting after having finished our tasks-work.
+  
+  \item[Development] \hfill \\
+  Development was one of the most time consuming activities we had. It included research, analysis, design, coding, and testing among others.
+  \item[Testing] \hfill \\
+  Testing was a very important activity, as it makes sure that our product is stable, and operating well. However it was was a tough one to achieve, especially in the first sprints, because we faced problems in integrating tests into our Grails project. However we finally managed to achieve 97\% test coverage of our code, in the final version.  
+  \item[Demo Preparation] \hfill \\
+  For each sprint we held two Demos, one for the course needs and one for the product owner. It helped us on summing things up, and having a nice overview on how things worked the whole sprint.
+  \item[Class Demo Presentation] \hfill \\
+  This refers to the Demo Presentation in the Class, which always took place the last Wednesday before the end of the sprint. It was a very important procedure, because we could get feedback on our work both from teachers but also form other colleagues that were watching the presentations. We also  had a small Q\&A session at the end of the presentations, which also helped us to better evaluate our work.
+  \item[Retrospective] \hfill \\
+  At the end of each sprint, we had a retrospective session. We were discussing about how the sprint worked, what went well and less well, and finally about how we can improve our performance and avoid making mistakes in the next sprints. Sprint Retrospective really helped us, and we managed to drastically improve our performance throughout the sprints.
+\end{description}
+
+The following diagram, Figure \ref{processOverview} shows how activities were related to each other. Rounded Rectangles are activities and arrows indicate activity relations in regard to time. Activities underlined with {\color{green}Green} belong to the Planning phase, with {\color{red}Red} to the Sprint phase and with {\color{blue}Blue} to the Retrospective phase.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=110mm]{images/processOverview.png}
+	\caption{Process Overview}
+	\label{processOverview}
+\end{figure}
+
+\subsection{Effort Data}
+The data presented int the following table, retrieved form the Version Control system. Since the program\footnote{http://www.dheeler.com/sloccount/} suggested was not working for our Groovy\&Grails project, we found one that could only count the lines of code added in each version\footnote{http://cloc.sourceforge.net} and provided support for our framework. To compute the Predicted Effort we had to manually apply the "Simple" formula of the COCOMO 81 \footnote{http://www.mhhe.com/engcs/compsci/pressman/information/olc/COCOMO.html}. We made the following assumptions concerning the Actual effort. A person month is 160 hours and 1 point in our Backlog equals to 1,5 hours of human work. So the Actual effort is calculated using: $ ActualEffort = (SprintPoints*1,5)/160$
+
+\resizebox{16cm}{!} {
+\begin{tabular}{l || c c c c c}
+	Sprint & Date & Revision & SLOC & Predicted effort & Actual effort \\
+	\hline \hline
+	\#1	&	7-March-2014 	& 0b9389a197e86606e89f0e001223e806a0201687 	& 	2351	&	5.89 	& 150.75 (0.94) 	\\ \\
+	\#2	&	28-March-2014	& 41ba8ba536e21cd88b6a4aac026a5ba94a90ac7c 	&	543		&	1.26	& 109.5 (0.68)	\\ \\
+	\#3	&	2-May-2014		& 41ba8ba536e21cd88b6a4aac026a5ba94a90ac7c	& 	0 		&	0 		& 151.5 (0.95)	\\ \\
+	\#4	&	23-May-2014		& 9e4df0a1160eb1a15a5e38193f7b7a845d0dc27d 	&	43460	&	125.95	& 206.25 (1.29)	\\ \\
+	\#5	&	6-June-2014		& 7b0cb6363e96aa02eaf327ea5d55c996b3b3b83f 	&	18229	&	50.58	& 135.75 (0.84)	
+	
+\end{tabular}
+}
+
+\begin{description}
+	\item[Sprint \#1] \hfill \\ In the first sprint we spent many hours in code-unrelated stuff (Searching for available frameworks, meetings and so on). When we started working on Groovy\&Grails framework we had much of the code auto-generated form the framework, thus we have 2351 lines of code when we barely wrote 100 ourselves. So, both of the above facts explain the discrepancy between the predicted and actual value.
+	\item[Sprint \#2] \hfill \\ We started working on the template we took form the design team, and after adopting it to Grails, we implemented the back-end functionality of the Events Page. Predicted effort does not reflect the fact that the HTML and CSS code added was not our work. Thus the actual effort is lower than the predicted one.
+	\item[Sprint \#3] \hfill \\ As you can see we have the same Revision number and SLOC is not calculated. The goal for this Sprint was about to continue adding functionality  to what we have already implemented in sprint\#2. However in the middle of the sprint we had to re-plan our work. Product Owner insisted us to abandon the existing work and focus on the Mock-up recreation because he decided that we should start everything from the very beginning. Our team was responsible to assist the company in the Mockups re-design. After lots of meetings discussing technical and non-technical issues, we met our goal. Taking everything into consideration, we conclude that despite our work, we have no code to demonstrate for this sprint. So Revision stays the same as in Sprint \#2, SLOC is 0 and Predicted effort is also zero. However Actual effort is calculated, following the same procedure as in previous sprints.
+	\item[Sprint \#4] \hfill \\ This sprint we did really significant work, which included, new responsive templates, improve Back-End functionality, restructure of the Domain Model, Javascript extensions etc. But still we could not have written 43460 lines of code in only one sprint. This anomaly happened because the SLOC program also calculates the code of imported plugins, as BOOTSTRAP .js and .css files, Testing Plugin etc. That interprets why actual effort is much lower that the predicted one.  
+	\item[Sprint \#5] \hfill \\ The same applies here too. In this sprint we worked on polishing our product, which among others included the addition of many plugins, as Cobertura and so on. Again the SLOC program can not distinguish which part has been written form us, and so we have this huge difference between predicted and actual effort. 
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Product Owner - End User Involvement}
+We managed to work really close with the product Owner. We were discussing features he wanted to implement, thinking of alternative ways of doing them, and finally concluding and forming appropriate user stories. There were also moments that we came out with new ideas for the project, in which we consulted him, about whether this feature can be useful or not.
+In the very beginning product owner had no idea about what scrum is or even the backlog. Thus to make everyones lives easier, we explained him the Scrum procedure and "forced" him to establish a backlog. After some research he did on his own, following also our suggestions, he started working on Trello\footnote{https://trello.com/} Organizer. 
+Finally Product Owner was always reachable by phone Facebook or Skype, and we faced no problems in contacting him.
+
+Concerning the users, in sprint \#2 we created a questionnaire \footnote{https://docs.google.com/forms/d/1Jvxqs9UUA5JmDY6NLKDwfl4Z4JzHzHZXlBw23QmueEk/viewform} and we forwarded it to users that were all familiar with internet. It consisted of 9 question and we collected 29 answers, which somehow validated our results. The most important results exported were: 1) More than 80\% of the users believe that photos can positively influence a website experience. 2) 90\% believes that proper information is the most important attribute of a website. After discussing collected results with the product owner, he thought 2GoCopenhagen redesign might be crucial. That combined with the results they had from another questionnaire they ran with users from the Facebook Group \footnote{https://www.facebook.com/2gocopenhagen}, might lead him to the decision he made in sprint \#3, to drop the development line and focus to the design only.
+
+Finally, from sprint \#4 we started running our implementation as a prototype for a small group of users. Those users are all closely related to the product owner. We gave them our Cloudbees server URL, so they are able to explore and interfere with the User Interface. Product owner is collecting opinions from them, and it helps him realize what are the next steps of the implementation, how users will probably react to the final product, and what need to be fixed or added to the functionality.
+\subsubsection{Ideal Approach}
+ There is no ideal point to which users should be involved in the process. It is advisable to involve them throughout the implementation phase. However, it is important at least to involve them  when we have a product almost ready to be shipped. So Users, Events, Offers, Guide and Articles should all be completely finished.
+ Thinking of genuine user participation described in \cite{BodkerUserInvolvement} combined with including users from every user group as described in CESD \cite{CESD}, would consisted an ideal approach for user involvement. Therefore normal users ad companies should be included. They will provide us with knowledge on how they want to use the system, if the need any other functionality and so on.
+Therefore, the following tools mentioned in \cite{BodkerUserInvolvement} can be utilized for this purpose.
+\begin{description}
+		\item[Interviews] They are used to gather information from staff, potential customer and users. The interview should take place into 2GoCopenhagen offices, and they should be semi-structured formed. A successful interview is conducted not only in question-answer format but more like a conversation. In this way new knowledge can be extracted for us, that will help us after analyzing the interview, to modify, work on and improve our product. It would be highly preferred if we have 2 different interviews, one for simple users, and another one for Companies. Since their role is totally different in our product we can query them different things and extract appropriate information.
+		\item[Future Workshops] While new issues arise, a workshop would have been a great way to gather all team together and solve the issue. In that way we can all have the same understanding and realization of the problem, and during the workshop, which can include potential users, we can all conclude in a solution that will meet everyone needs.
+\end{description}

@@ -1,0 +1,107 @@
+
+In this section relevant work in related fields is presented, analysed and discussed. We first present some summarized information on relevant papers,  to give an idea of what is going to follow. Afterwards, we separate relevant literature in publications that are related with pressure on mobile devices \ref{sec:pressureMobileDevices}, those related with measuring the contact size or investigating simulated pressure techniques \ref{sec:simulatedPressure}, and finally we present some new approaches on finding alternative ways to interact with our mobile devices.
+Below we give a short introduction on the relevant literature, by outlining some significant papers and giving a fast introduction to the research field. Part of this short introduction was also included in my Thesis Synopsis.
+
+Fat Finger was mainly influenced by the \emph{"Fat Thumb: Using the Thumb's Contact Size for Single-Handed Mobile Interaction"} \cite{Boring2012} which deals with a very similar problem. Boring et al. presents \emph{Fat Thumb} as an alternative technique that adds a dimension to touch input on a mobile device, thus giving different meanings to touch motion. It was done by making use of thumb's contact size allowing seamless mode switching. Testing supported the hypothesis that \emph{Fat Thumb} is at least as fast as other related techniques.
+In literature we find examples of efforts towards enhancing the current ways of interacting with mobile devices.
+FingerSkate ergonomic based study \cite{Son:2013:FMM:2508468.2514733}, introduces a variation to the current multi-touch operations. It aims to make this operations less constrained and more continuous. With FingerSkate, once one starts a multi-touch operation, he can continue the operation without having to maintain both fingers on the screen. It also addresses to major ergonomic issues, that simple multi-touch operations have.
+Thumb Rock \cite{Bonnet2013} is another approach in interacting with mobile devices taking advantage of the contact size. In particular it presents an in-drag gesture that consists of rolling the thumb back and forth on a touch surface. Taking advantage of this, many operations on mobile devices are simplified. It can be used as a supplement to tapping, allowing editing or zooming depending on the application. 
+Fat Finger is mainly focused on the use of our index finger and the exploitation of it's contact area to better interact with a tablet-mobile device.  
+
+\emph{"Contact size as an input parameter is closely related to pressure (i.e., more pressure suggests a larger contact size due to flattening of the finger"} \textbf{\cite{Boring2012}}. Ramos et al. \cite{Ramos2004} found that only a level of six different pressure values is actually optimal and distinguishable by the users. However his study has been done using a stylus as input to a tablet device. In GraspZoom \cite{Miyaki:2009:GZS:1613858.1613872} a different approach was chosen integrating pressure in the interaction with the mobile device. Users could press the back of the device, allowing them to temporally switch modes (e.g. from panning to zooming). All the above systems are investigating the different ways of pressure as an input parameter, but none of these systems explore the use of simulated pressure --- finger's contact size --- while simultaneously moving the finger, on a tablet device.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pressure on Mobile Devices}
+\label{sec:pressureMobileDevices}
+
+Using pressure to interact with a mobile device has been a great field of research almost since the first computers were launched. Using pressure for controlling specific application or widgets, were the use of mouse is not behaving naturally has been previously investigated and tested.
+
+One of the first researches, on using pressure in UI (User Interface) was done by Herot and Weinzapfel \cite{Herot:1978:OTI:965139.807392} back in 1978. They explored the ability of the human finger to apply pressure and torque to a computer screen. They describe a PSD, which is able to accept input of direction and torque, produced when our finger is touching the computer screen. They conclude that \emph{"touch and pressure sensing open a rich channel for immediate and multi-dimensional interaction"} (\cite{Herot:1978:OTI:965139.807392}).
+Buxton et al. \cite{Buxton:1985:ITT:325165.325239}, in a later study, explored touch-sensitive tablet input and at that time suggested that, control when pressure is the only source of input, can be difficult, especially in the absence of buttons. They present a painting application, in which pressure is used to control the width of the brushes and generally the tools that are being used. However as we will see, this opinion alternated through the years, and control through various pressure techniques has been vastly improved and evolved.
+Ramos and Balakrishnan \cite{Ramos:2003:FIT:964696.964708}, introduced a concept prototype called LEAN. It was designed to provide navigation, segmentation and linking capabilities on digital videos, and targeted to be used with pressure-sensitive tablets, as it contains widgets that can be controlled through the pen's pressure. By utilizing pressure sensitive pens, they increased the available ways of providing input to a tablet device.
+
+Ramos et al. on pressure widgets \cite{Ramos2004}, performs a high related to ours study. However, instead of using the finger as the source of input, he explores the pressure-sensing capabilities of styluses, when used to provide input on a tablet device. He reasoned on the following research questions, which also have many common aspects with our prospective for Fat Finger.
+\emph{How many different pressure levels can a user distinguish; what is the impact of visual feedback on participants performance; what is the impact of the practise on user performance; what mechanisms can be used to confirm target selection?}
+Human ability on performing discrete selection tasks (Continuous targets are not included) by using a pressure sensitive stylus,  is also investigated. He is investigating, among others, Dwell and Quick Release techniques for confirming target selection. 
+Dwell is about maintaining the cursor inside the target region for 1 second; while Quick Release involves the quick lifting of the stylus from the tablet’s surface.
+As we will see later, we will also use the two aforementioned techniques, but not for comparing or even evaluating purposes. He  concludes that 6 levels is the optimal division of the pressure space, because errors are still affordable. He also points out that, Quick Release is the preferred selection technique.
+
+
+In GraspZoom \cite{Miyaki:2009:GZS:1613858.1613872}, Miyaki and Rekimoto propose a multi-state input model for mobile devices that is controlled through pressure and thumb gesture. User can apply pressure to the back of the mobile device, which switches from zooming to panning mode. However this approach required an extra pressure sensor (FSR), attached on the back of each device.
+User studies have also been conducted to better understand the fundamental traits of pressure, in UI for general mobile devices. Stewart et al. in \emph{Characteristics of pressure-based input for mobile devices} \cite{Stewart:2010:CPI:1753326.1753444}, tried to understand and reason on the mapping functions for pressure input. They investigate the results of applying pressure from the front, back, or from both sides on a mobile device, while performing a pinch movement. They conclude that input form both sides  outperforms the single-sided one and is competitive with techniques that apply pressure against solid surfaces. 
+
+McCallum et al. in PressureText \cite{McCallum:2009:PPI:1520340.1520693}, suggested a way of using pressure in old style - numeric keypad phones. Using an pressure-sensitive keypad, and mapping multiple taps to different levels of pressure found that PressureText performs equally well with other existing techniques, especially after repeated and continuous exposure and training. On the other hand, Clarkson et al. proposed adding simple pressure sensors under the keypad buttons, and not using an external one \cite{ClarksonGVU}. They conduct a study in which they facilitate by pressure, already existed interaction techniques. 
+Brewster et al. also investigates possible ways to use pressure for text input on mobile devices \cite{Brewster:2009:PTE:1613858.1613870}. They map soft presses to lower-case letters, and hard presses to upper-case, trying to boost mixed-case text typing. They conclude that pressure-based input can outperform that shift-based standard, when we focus on mobile devices.
+
+There are also researches, which tried to find different - not requiring extra sensors- ways of identifying the levels of pressure applied on a mobile device. They rely on software to estimate-calculate the pressure applied, from sensors that are commonly available on mobile devices, for instance the accelerometer. \cite{Goel:2012:GUB:2380116.2380184,Heo:2011:FEI:2037373.2037393,Hwang:2012:MPP:2212776.2223717,Hwang:2012:PEP:2212776.2223673}. GripSense \cite{Goel:2012:GUB:2380116.2380184} uses the built-in sensors of mobile devices to infer hand postures.
+ ForceTap \cite{Heo:2011:FEI:2037373.2037393}, combines location data from the screen and data form the accelerometer to distinguish strong versus gentle taps. Hwang et al. in MicPen \cite{Hwang:2012:MPP:2212776.2223717} with a microphone equipped stylus pen tried to estimate the pressure level applied on the screen. This is done by analysing the acoustic signal of the interference between the screen and the stylus. Also, in PseudoButton \cite{Hwang:2012:PEP:2212776.2223673}, Hwang et al. proposes another inexpensive way to emulate pressure sensitive touch sensor, again by utilizing and re-purposing the built-in microphone on mobile devices.
+
+
+In a more recent study, VibPress \cite{Hwang:2013:VEP:2493190.2493193} implements a technique to detect pressure \emph{" by measuring the level of vibration absorption with the built-in accelerometer when the device is in contact with a damping surface (e.g., user's hands)"} (\cite{Hwang:2013:VEP:2493190.2493193}). They support that this technique is at least as accurate as hardware supported approaches. The maximum number of pressure levels that are distinguishable by users is also broached and studied.
+Low et al. investigated the ability to detect the pressure applied on the screen through the camera and the flash of a mobile phone \cite{Low:2014:PDM:2582051.2582062}. This is accomplished by measuring the light that is reflected through our finger, from the flash to the camera. The more pressure the less this light will be.
+Finally, Arif et al. investigated the pseudo-pressure detection on standard touch screens and concludes that with this technique we are only able to identify two different pressure levels \cite{Arif:2013:PDU:2541016.2541024}. He then utilizes this technique to present a pressure-based predictive text entry technique, in which extra pressure is used to omit changes from unwanted predictions.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact Shapes and Simulated Pressure as source of input}
+\label{sec:simulatedPressure}
+
+This section presents publications that investigate the use of Contact Shapes, Simulated Pressure - Contact Size as the source for input mainly on mobile devices. Please note that relevant studies that presented in the introduction of Section 2 are not presented here.
+
+In 1985, Lee et al. \cite{Lee:1985:MTD:1165385.317461} presented a touch-sensitive tablet prototype. It was capable to detect the on-screen position for multiple fingers at the same time, and also estimate the contact size for each of those fingers. It was one of the first three dimensional approaches in interacting with a tablet device.  There have also been approaches on applying multi-touch sensing on rear projected interactive surfaces \cite{Han:2005:LMS:1095034.1095054}. The touch sensing was achieved by utilizing the total internal reflection.
+
+Benko et al. proposed "Dual Finger Selections" techniques which, are designed to support and assist users in selecting very small targets on touch-sensitive displays \cite{Benko:2006:PST:1124772.1124963}. They are capable in providing pixel-accurate targeting, but only if the tablet is also equipped with computer vision-based tracking. The user study showed the superiority of "Dual Finger Selections" compared to the standard techniques. 
+ShapeTouch \cite{CaoShapeTouch} tried to fully utilize the contact shape of the fingers touching the screen, by using interactive surfaces to manipulate various objects. ShapeTouch tries to simulate real object interaction by inferring virtual contact forces from the contact regions and use them to enable interaction with virtual objects. In AnglePose \cite{Rogers:2011:ARP:1978942.1979318} we observe another approach to track the position and angle of the fingers touching the screen.
+In \emph{Detecting and leveraging finger orientation for interaction with direct-touch surfaces} \cite{Wang:2009:DLF:1622176.1622182} we meet yet another approach to move the interaction from 2D(only x-y coordination information) to a 3D one, by exploring the role of finger orientation.
+
+Holz et al. in \emph{Understanding Touch} \cite{Holz:2011:UT:1978942.1979308}, revisits the assumption that users acquire target with the centre point of the contact area between their finger and the screen. He supports that it is subject to systematic error offsets in our interactions. Their study drops the error rates from $4mm$ to $1.6mm$, which give evidence that users do align visual features with the target, and this, indeed is the most possible way they are thinking of touch input.
+ In \emph{MicroRolls} \cite{Roudaut:2009:MET:1518701.1518843} we encounter a study, in which after having understood the already existing touching capabilities, they try to enhance the interaction between the thumb and a mobile device by detecting and discriminating those thumb gestures that present zero tangential velocity. They name them MicroRolls. 
+ Finally, in \cite{Goh:2014:ETE:2658779.2658780} we encounter an approach to utilize contact area and use it to provide text entry capabilities to visual impaired people.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\section{New Mobile Interaction approaches}
+
+The past few years there is an increasing demand on seeking for alternative ways on using the mobile and electronic devices. Users tend to have the will to overpass the conventional - existing ways that were used long before for Human Computer Interaction (HCI), and are willing to experience new more sophisticated ways, that might also feel more natural in mobile device interaction. In this section we present relevant work which is heading towards the fulfilment of this ideal; find alternative sophisticated ways in HCI. However we only include approaches that are relevant with pressure, or finger interaction.
+
+Pointpose \cite{Kratz:2013:PFP:2512349.2512824} proposes a way to increase the expressiveness of touch input, by adding a 3rd dimension variable on the way we interact with mobile Devices; finger rotation and finger tilt. To perform this operation, Kratz et al. uses  a short range depth sensor which, scans the touch screen of the mobile device, and using their proposed algorithm, finger rotation and tilt can be precisely detected and calculated. Point pose can settle the foundations to build upon and create many kinds of applications than will interact by taking advantage of the finger expressiveness.
+Spinder et al. \cite{Spindler:2014:PVS:2556288.2557028} reconsiders zoom and pan in mobile devices. They present a study in which they thoroughly compare pinch and drag gestures with their proposed technique which, relies on spatial manipulation. An example of spatial interaction can be to move a tablet device up and down to zoom in and out respectively. They conclude that their proposed technique is performing better than the Pinch-Drag-Flick mainstream one.
+
+Lochtefeld et al. \cite{Lochtefeld:2013:EHF:2541831.2541865} addresses the problems we face when we want to use a large screen mobile device with only one hand. Operations is then limited since we do not have full control with only one hand, both holding and interacting the device. They evaluate a back-front device touch input mechanism, which allows accurate handling bit sacrifices the performance. 
+TouchShield \cite{Hong:2013:TVC:2468356.2468589}, is another approach that tries to manipulate the one-hand limitations on mobile devices. It is done through a visual control that can be activated when large contact size is detected on screen for a specified amount of time. Then it is able to provide you thumb-access to some frequently used commands, while retaining the ability to observe the underneath interface. 
+Li et al. \cite{Li:2013:BBC:2543651.2543680} proposes yet another way for singe-handed mobile interaction. It allows the user to select on-screen objects with a simple fluid-action consisted of two parts. Firstly, bezel swiping to invoke the tool and afterwards virtual pointing which is used to select objects that are beyond you thumbs access area.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fat Finger establishment}
+
+In this section we met many different publications, all trying to find, investigate and test, alternative ways of using pressure (in general) as an input parameter on mobile devices. We ecountered approaches which use pressure sensitive screens to measure the pressure applied on them. Others with external devices attached on the mobile devices, used to detect pressure or similar by scanning and tracking the movement of the finger. We also observed efforts in trying to infer pressure from sensors that are already avilable inside the mobile devices. What all those approaches have in common is that they try to improve the user interfance and the user experience we gain from using our mobile devices.
+
+All the aforementioned systems examine altenative ways of using pressure or simulated pressure as an input parameter on mobile devices. We went through studies that extensively investigate the usage of thumb as the main source of input; especially when we use our mobile device in single-hand operation. Ramos et al. in Pressure Widgets \cite{Ramos2004} investiagated the pressure aa raw data, and did a significant effirt to understand what are the limitson it. He tried to understand how many distinguishable pressure levels we can obtain when using a pressure sensitive pen on a tablet device. However none of the aforementioned papers address our research question and our study.
+
+In Fat Finger we are trying to achieve significant improvements, by utilizing the contact area of our index finger. Our ultimate target is to develop new ways of interaction with the iPad, which will enhance the current ones. We have to deal with the finger’s contact size area and more specifically, with how much detail we can obtain from this area, to give us the ability of mapping many different actions to different contact sizes. Specifically, we are trying to exploit the capabilities of the touch area when using our index finger, in the best possible detail-way. "What id the pression we can obtain using this technique?"" Finally, we do not accomplish this study having in mind to use Fat Finger technique as an alternative to the already used ones, but we want to be able to use it in parallel with them, to better enhance the experience of the users. In the next chapter we explain our logic and thinking behind this application, and we analyse what we will try to achieve from this study.

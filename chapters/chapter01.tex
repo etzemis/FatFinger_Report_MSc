@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Over the last few years, mobile and tablet devices, have become an indispensable part of our every day life. 
+We mainly use them to communicate with others (Skype, FaceTime, chatting), surf the World Wide Web \cite{www}, read documents, and play video games. 
+Tablet devices have also been assimilated in various working environments, providing a simpler, more accurate and direct way to monitor results, present graphs, and manipulate data by utilizing the touch motion and the device's portability.
+Due to this variety of usage, most manufactures (Apple, Samsung, Google, LG etc.), continuously update their models with improved hardware and software to perfect match the user needs.
+Since tablets devices and smartphones do not include any physical keyboard, numerous new techniques have been introduced to overcome this issue. The idea behind those approaches is: \emph{"Give Meaning to Touch"}. Introduction of gestures and multi-finger interaction \cite{multiTouch} has partly solved this problem. However, as we realize, we are always seeking for a more compact and robust approach, which will provide us the necessary tools for seamless and fluent interaction with our mobile devices. This lead us the following (rhetorical) question:
+
+\emph{"Is the way we interact with mobile devices the most effective one? If not, how can it be improved?"}
+
+Modern mobile devices are touch-based, allowing users to navigate through the interface using their finger, and type-in using a virtual keyboard. 
+In the beginning, back to when the first commercial tablets were born, interaction was based on single-finger input. User interface was based on buttons and users had to select the corresponding buttons to perform discrete actions.
+Recently, Multi-Finger interaction has been introduced, trying to emulate and simulate the behaviour of objects. This intends to make the user-interface more natural and improve users experience. 
+Styluses have also been used to provide input on tablet devices. They are meant to assist users in performing more complex and accurate tasks (as drawing - designing), while some of them are even equipped with pressure sensitive sensors that detect the pressure applied and can be utilized by drawing applications (e.g. Photoshop) to control stroke width, or similar. 
+Application-wise there are several applications in the App Store, Google Play etc. that use all those different kind of gestures to make complex tasks seem less confused. However users have to keep track of all those different gestures, and in case the application is not carefully designed, gestures will become cumbersome. For example, one finger for panning, blending into a two-finger pinch gesture for zooming, or even a three-finger drag to change modes in specific applications.  
+From now on we will refer to interaction techniques that use only the position (x-y coordinates) of the finger(s) for providing basic input to tablet devices as \textbf{2D interaction techniques}, and to those that might use 2D interaction plus something extra (pressure, simulated pressure, vibration absorption) as \textbf{3D interaction techniques}.
+Taking everything into consideration, I strongly believe that tablet devices are capable of providing even more natural ways for manipulating the content on them, and this is what I am seeking for in this thesis dissertation. I am proposing the Fat Finger interaction technique which exploits the contact size of the finger touching the screen, and thus belongs to the 3D interaction techniques. It adds a degree of freedom, which could later be used to integrate multi-finger drag gestures into a single fluid interaction, or just enhance the current ways we interact with tablet or mobile devices. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{2D Interaction Techniques Evolution}
+
+
+During the past years, the ways we use and provide input to our mobile devices have been vastly changed and evolved. The first input interface we meet is the simple 10 button keypad. Each button represents a number and a set of characters. Help buttons (as "*", "\#", "accept call" and "end call" ) were also provided. Whilst typing in such devices was cumbersome, continuous training and exposure to the interface made certain users develop high level technique, resulting in super-fast typing. 
+In other more recent mobile devices we meet a mobile keyboard with much more buttons, called QWERTY \cite{qwerty}. Now, users had one-to-one correspondence between buttons and letters. However, due to the phone's size limitations, buttons were too small, making typing inefficient at certain circumstances.
+To increase usability in old-style phones, a new typing technique was developed. Using a dictionary-based typing system, the necessary buttons clicks needed to type any kind of text, were vastly decreased. Thus, typing speed improved, even with a very simple number-based keypad. 
+
+With the release of the first iPhone \cite{iphone} in 2007, the industry of smartphones, gained massive adoption. Smartphones can be thought as augmented featured normal phones. The iPhone was one of the first mobile phones to use a multi-touch interface, and the finger as the main source of input. Modern smartphones does not include a physical keyboard. 
+So now, instead of providing input through the keypad, virtual keyboards and touch events were introduced. 
+
+%tablet
+Tablets followed the release of smartphones. A tablet is a portable computer with a touch sensitive display. It is usually equipped with cameras (front \& back), microphones, accelerometer, gyroscope, Touch ID \cite{touchID} etc. It provides touch input capabilities that can either be utilized using finger or a stylus. For text-entry, apart from handwriting recognition they also offer virtual on-screen keyboards. Finally their screen size is typically between 7'' and 10.1''.
+The first tablet device was commercially available in 1989 from GRiD systems and was named GRiDPad. Until 2010, many companies have released their own version of tablet, most of them using resistive stylus driven screens. Resistive screens allow a high level of precision and are definitely preferred when used with a stylus.
+After 2010 tablets use capacitive touch-screens, which allows for multi-finger interaction, and avoid the use of styluses. This allows integrated hand \& eye operation, since there is neither a stylus or a mouse to interfere. They also use ARM processors from improved battery life. Apple iPad was the product that defined the class of tablets and shaped the commercial market when launched, back in 2010. It runs iOS, a mobile version of MacOS, specifically designed for finger use, avoiding stylus requirements. 
+
+Above we observed that many things changed through the past years in the commercial products, both addressing the mobile phones and the tablet devices. However  the principle we use to interact with all those mobile or tablet devices, did not really evolved.
+ The interaction in only 2 Dimensional. In older keypads, the dimensions are the buttons and a boolean value which represents if a specific button is being touched or not.  
+When operating on touch screens, we only get the x-y (2D) coordinates representing the point(s) we are touching on the screen.
+Using multi-touch, we can now combine multiple fingers to perform more complex operations, which proved to be very effective. This is mainly because most of the gestures, movements and gestures we would do with physical objects, just transferred to the virtual environment. The most commonly used gestures are: Tap, Double Tap, Long Press, Scroll, Pan, Flick Two Finger Tap, Two Finger Scroll,  Pinch, Zoom and Rotate.
+Despite the flexibility multi-finger provide us, 2D principle still holds because we only utilize the position of each finger touching the screen, and not other parameters as contact size, orientation, tilt, etc. Taking everything into consideration, I believe that we need to exploit the capabilities of all those modern devices and enhance the current ways of interaction, by introducing a third dimension on the input, as section \ref{sec:3dInteraction} explains and analyses.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fat Finger \& 3D Interaction Techniques}
+\label{sec:3dInteraction}
+
+When referring to \emph{3D Interaction Techniques} we refer to all those methods that use three-dimensional (3D) input to navigate into a two-dimensional (2D) environment. For the purposes of this study, by referring to a 2D environment we mean the interface provided by modern mobile and tablet devices. These interfaces are becoming more and more complex as user needs and application functionalities increase. As a result, we need to find a way to respond to this interface complexity and be able to provide as precise input as we want. Multi-touching has been proposed for this exact reason; to make interaction with applications less constrained and more fluid. 
+However, the need to provide even better and coherent input to tablet devices, only through our finger(s) still exists and holds. For instance, using a stylus, this can be achieved by exploiting the pressure sensing capabilities they provide. Different actions can be mapped to different pressure levels. But what can be achieved without using any external equipment?
+
+In this study, we are studying the capabilities of our finger(s) to provide three-dimensional (3D) input on a tablet device. The three dimensions we propose  are the position on the $x$ axis, the position on the $y$ axis and finally the size of the contact area touching the screen. The first two dimensions (x-y position) have been already extensively studied and used by all current mobile and tablet devices. However there is insufficient research on which are the capabilities of the contact size ability to provide accurate input on mobile devices. We propose Fat Finger, which fully investigates and extensively studies, the limits on using contact size for input on a tablet device. We settle an experiment which is in the form of discrete target selection tasks. We then analyse the results we obtained and try to reason on the the actual capabilities of this interaction technique.
+
+Getting to understand how touch works, is the only and necessary step towards applying a three-dimensional (3D) input method on tablet devices. Once we know, the limits of contact size capabilities as a source of input, then we can combine it with the on-screen position of the finger, or multiple ones, and benefit from this new way of interaction. However, apart from that, applications should be designed and implemented, to take advantage of this input method. That way complex actions will be easily performed by mapping actions to different pressure - contact size levels. 
+Contact size can also be used to simplify current interfaces. For example zooming, or sound level are features that can be controlled controlled by alternating the contact size of our finger, which will lead to the removal of their corresponding buttons, and thus the simplification of the interface. Applications as Adobe Photoshop, will now be able to control the stroke width without using any stylus augmented approaches. Concluding, Fat Finger will study the capabilities of using contact size and simulated pressure as an additional parameter for input on tablet devices, while integration with applications and test of possible usages will be a part of another study.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thesis Structure}
+
+The structure and the content of the thesis is shortly described below. This work is consisted of 7 Chapter, including this one, which are structured as follows:
+
+\begin{itemize}
+    \item \textbf{\textit{Chapter 2:}} Publications related to pressure or contact size detection and monitoring on Mobile devices, are presented. We quote papers that are highly relevant to our work, and also others that are just in the same field. They are meant to help you, the reader, to better comprehend current environment and advances in the area, familiarize with this field of studies and finally understand in which points this study differs from the others.
+    \item \textbf{\textit{Chapter 3:}} We present the concept and analyse the idea behind Fat Finger interaction technique. We then state the scientific question that this study tries to respond to, and also give some details on how we will try to give answers to each of those questions.
+    \item \textbf{\textit{Chapter 4:}} We present the Implementation of the software required to test Fat Finger. We give every possible detail on the way it works, how it is designed and on the way the interface is being built. 
+    \item \textbf{\textit{Chapter 5:}} All the information regarding the User Study we performed is included. We present and thoroughly explain each of the phases --steps-- we followed for each participant that took part in our study. Finally we set our Hypotheses that we will try to defend and prove that they hold on Chapter 6. 
+    \item \textbf{\textit{Chapter 6:}} We present the results of the User Study, separated in corresponding categories. Each category represents a specific metric we tested. We also provide visualization through graphs and finally we comment on the results.
+    \item \textbf{\textit{Chapter 7:}} We discuss the results, and comment on whether the overall concept and the hypotheses placed on Chapter 5 hold.
+    \item \textbf{\textit{Chapter 8:}} Conclusion and possible Future work is included.
+\end{itemize}   

@@ -1,0 +1,72 @@
+\section{Software Evolution}
+
+\subsection{Module Collaboration Graph}
+
+The \emph{'Module Collaboration'} graph of 2GoCopenhagen is presented in Figure \ref{CollabGraph1} for Sprint \#1 and in Figure \ref{CollabGraph5} for Sprint \#5.
+Module Collaboration graphs capture communication between modules, and in general help us understand how modules communicate. The graphs are constructed in the following way. Nodes are packages we have added into our Groovy\&Grails project. Secondly, if a function in Module A calls a function in module B the graph contains a directed edge from A to B. As we can see in Sprint\#5 we have more nodes, and average node Degree is also higher. Also while in sprint\#1 we have 4 "View" packages, in sprint\#5 we only have one. In sprint\#5 we also observe the addition of packages, as Services and TagLib, and the decomposition of Domain.grails.cliskstart into  Domain.Users, Domain.Content, Domain.Payment and Domain.Comment. Comparing the two graphs the evolution of our software and the relationships between the packages can easily be depicted. We can also learn about the architecture changes, and how architecture evolved - is evolving - through the sprints.  
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.5\textwidth}
+                \includegraphics[width=\textwidth, height=60mm]{images/ModuleCollaborationSprint1.png}
+                \caption{Sprint \#1}
+                \label{CollabGraph1}
+        \end{subfigure}%
+        \begin{subfigure}[H]{0.5\textwidth}
+                \includegraphics[width=\textwidth, height=60mm]{images/ModuleCollaborationSprint5.png}
+                \caption{Sprint \#5}
+                \label{CollabGraph5}
+        \end{subfigure}
+        \caption{Module Collaboration Graph of 2GoCopenhagen}\label{CollabGraph}
+\end{figure}
+
+\subsection{Commit-Based Developer Collaboration Graph}
+The \emph{'Commit - Based Collaboration'} graph of 2GoCopenhagen is presented in Figure \ref{CommitBased1} for Sprint \#1 and in Figure \ref{CommitBased5} for Sprint \#5.
+Commit - Based Collaboration graphs traces how developers have collaborated in events, other than bug fixes. Nodes represent developers, so we have 4 in each sprint. An undirected edge form developer A to B means that A and B have worked in the same file for the specified sprint.As we can see in Sprint \#1 there is no edge connecting any of the developers. This happened because in that sprint our project established and we only had 1 commit. However is sprint \#5 we can see that developer A and B worked on the same file, and more precisely in the Groovy Server Page and Javascript code as it can be seen from the commits.
+Commit - Based Collaboration graphs can give us a bird-eye view on whether the user stories have been split wisely so that all developers will work in separated, unrelated tasks. It also give as an overview of the process followed and whether there are dependencies between the stories. However in such small projects, as ours, not much information can easily be extracted through these graphs.
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.2\textwidth}
+                \includegraphics[width=\textwidth, height=\textwidth]{images/commitBasedGraph1.png}
+                \caption{Sprint \#1}
+                \label{CommitBased1}
+        \end{subfigure}%
+        \begin{subfigure}[H]{0.2\textwidth}
+                \includegraphics[width=\textwidth, height=\textwidth]{images/commitBasedGraph5.png}
+                \caption{Sprint \#5}
+                \label{CommitBased5}
+        \end{subfigure}
+        \caption{Commit - Based Developer Collaboration Graph of 2GoCopenhagen}\label{CommitBasedGraph}
+\end{figure}
+
+
+\subsection{Lehman's Laws and appliance to our project}
+
+Lehman proposed a number of laws that are applicable to large systems from large companies as they develop. However it is not sure whether those laws can be applied to smaller project as ours, and this is what I will argue for. 2GoCopenhagen comes under the Evolving system category from the perspective of software evolution. It is a project, embedded in the real world, which need to keep evolving while its environment is changing. The project complies to the following rules according to \cite{Lehman}.
+
+\begin{description}
+	\item[Continuing change] \hfill \\Our product needs to always adopt to each environment. We should to keep track of all customers trends and needs, and develop our product in order to fulfill them. If we fail or omit doing that, our product will progressively become less satisfactory for the users and the companies and they will unfortunately stop using it to promote their offers-products.
+	\item[Increasing complexity] \hfill \\This laws states that as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it. We saw that in practice. While we were developing our system, adding more functionality to it, we faced the following situation. It was mush easier just to write the code for the extra component in order to make it work. However in order to keep things simple we needed to follow techniques as, name conventions, same code style, simplicity and others; that all require extra work to achieve them.
+	\item[Continuing growth] \hfill \\Indeed our product owner insists that we should work towards user satisfaction. In order our product to be established and used globally we need to adapt it and increase its functionality according to user needs. When we launched our prototype our product owner received many suggestion form the users they used it. If we want to  satisfy them, functional content have to be increased.
+\end{description} 
+Concerning the other laws, there is no obvious way for them to be applied to our project.
+
+\subsection{Utilizing Graphs to investigate "Lehman's Laws"}
+As stated in \cite{GraphBased}, "Graph-based approaches can help to better understand software evolution, and to construct predictors that facilitate development and maintenance". Function-level interaction, module-level interaction, bug-based developer collaboration and commit-based developer collaboration graphs are very important in analyzing the evolution of a software, as software seem to follow common evolution laws. Quoting \cite{GraphBased}, "There are also similarities in trends and change patterns (cf. edit distance, clustering coefficient, modularity ratio) which suggest that programs follow common evolution laws.". Below, I present how we can check the applicability of Lehman's laws into a project, by investigating the above mentioned graphs. 
+
+\begin{description}
+	\item[Continuing change] \hfill \\
+	As described, "A program that is used in a real-world environment must necessarily change, or else become progressively less useful in that environment.". This means that new releases of the program should become available, that will maintain its usefulness. Thus this law can be tested if we check the releases of a program, and also the frequency of them.
+	\item[Increasing complexity] \hfill \\ 
+	The structure of a specific version can be seen using the function-level interaction, module-level interaction graphs. Comparing those graphs for two different releases we can observe what happens with the complexity of the system.
+	\item[Large program evolution] \hfill \\
+	This law is, perhaps, the most interesting of all. Quoting \cite{Lehman}, "Making small changes reduces the extent of structural degradation and so lessens the risks of causing serious system dependability problems". Therefore we need to be able to check whether between consequent releases we have minor changes or not, and we can actually do that by observing the above mentioned graphs.
+	\item[Organizational stability] \hfill \\
+	It actual says that the development line should be stable, no matted what happens inside the company. For illustration purposes, if X out of Y developers withdraw from a project, actions should be performed so that the overall progress will not change. It can be checked, comparing the graphs between releases. We should not observe any sharp traits, as for instance observed for Firefox in \cite{GraphBased}.
+	\item[Conservation of familiarity - Continuing growth - Declining quality] \hfill \\
+	Again graphs can be used to  check that the incremental change in each release is approximately constant.
+\end{description}
+
+
+
+
