@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.5)  25 NOV 2014 13:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.5)  26 NOV 2014 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,13 +1094,15 @@ Chapter 7.
 
 ] [76] [77]) [78]
 Chapter 8.
-(./chapters/chapter08.tex) [79
+(./chapters/chapter08.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79
 
 
-] [80
+])
+[80] (./bibliography/BiblioGraphy.tex (./FatFingerReport.bbl [81
 
-] (./bibliography/BiblioGraphy.tex
-(./FatFingerReport.bbl [81
 
 ] [82]
 Underfull \hbox (badness 3735) in paragraph at lines 143--145
@@ -1114,7 +1116,7 @@ Appendix A.
 
 
 ]
-<appendix/InstructionsFatFinger.pdf, id=969, page=1, 614.295pt x 794.97pt>
+<appendix/InstructionsFatFinger.pdf, id=977, page=1, 614.295pt x 794.97pt>
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
@@ -1146,7 +1148,7 @@ Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
 (pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
  [86 <./appendix/InstructionsFatFinger.pdf>]
-<appendix/InstructionsFatFinger.pdf, id=1000, page=2, 614.295pt x 794.97pt>
+<appendix/InstructionsFatFinger.pdf, id=1008, page=2, 614.295pt x 794.97pt>
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 2>
@@ -1170,7 +1172,7 @@ Appendix B.
 [88
 
 ]
-<appendix/DemographicFatFinger.pdf, id=1043, page=1, 597.50786pt x 845.04686pt>
+<appendix/DemographicFatFinger.pdf, id=1052, page=1, 597.50786pt x 845.04686pt>
 File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
 <use appendix/DemographicFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
@@ -1205,7 +1207,7 @@ Appendix C.
 [90
 
 ]
-<appendix/AssessmentFatFinger.pdf, id=1101, page=1, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1109, page=1, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
@@ -1237,7 +1239,7 @@ Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input
 line 13.
 (pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
  [91 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1140, page=2, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1148, page=2, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 2>
@@ -1257,7 +1259,7 @@ Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page2 used on input
 line 13.
 (pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
  [92 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1146, page=3, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1154, page=3, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 3>
@@ -1277,7 +1279,7 @@ Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page3 used on input
 line 13.
 (pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
  [93 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1152, page=4, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1160, page=4, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 4>
@@ -1297,7 +1299,7 @@ Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page4 used on input
 line 13.
 (pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
  [94 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1158, page=5, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1166, page=5, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 5>
@@ -1317,20 +1319,20 @@ Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page5 used on input
 line 13.
 (pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
  [95 <./appendix/AssessmentFatFinger.pdf>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
  (./FatFingerReport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 Package rerunfilecheck Info: File `FatFingerReport.out' has not changed.
 (rerunfilecheck)             Checksum: 7C71B4787C98176A8FE592E97A1520A6;3218.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 11072 strings out of 493315
- 164180 string characters out of 6137905
- 285737 words of memory out of 5000000
- 14070 multiletter control sequences out of 15000+600000
+ 11075 strings out of 493315
+ 164237 string characters out of 6137905
+ 286737 words of memory out of 5000000
+ 14073 multiletter control sequences out of 15000+600000
  12050 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,18n,58p,1350b,1189s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1349,10 +1351,10 @@ exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on FatFingerReport.pdf (95 pages, 5026872 bytes).
+Output written on FatFingerReport.pdf (95 pages, 5031816 bytes).
 PDF statistics:
- 1281 PDF objects out of 1440 (max. 8388607)
- 1048 compressed objects within 11 object streams
+ 1289 PDF objects out of 1440 (max. 8388607)
+ 1056 compressed objects within 11 object streams
  238 named destinations out of 1000 (max. 500000)
  617 words of extra memory for PDF output out of 10000 (max. 10000000)
 
