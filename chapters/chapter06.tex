@@ -1,4 +1,4 @@
-This chapter presents all the results we collected after performing the user study on Fat Finger interaction technique. We decided to focus on 5 basic results categories - parameters, which include the most significant information we collected and analysed. We present the results for Task Completion Time, Offsets, Learning Curve, Re-Entries - Re-Touches and Subjective Preferences. We also refer to the categories of the trials with the shortages presented in Table \ref{tab:typeIDnames}. This will help the reader to better understand and interpret the various graphs presented later.
+This chapter presents the results we collected after performing the user study on Fat Finger interaction technique. We decided to focus on 5 basic categories, which include the most significant information we collected and analysed. We present the results for Task Completion Time, Offsets, Learning Curve, Re-Entries - Re-Touches and Subjective Preferences. We also refer to the categories of the trials with the shortages presented in Table \ref{tab:typeIDnames}. This will help the reader to better understand and interpret the various graphs presented onwards.
 
 \begin{table}[H]
 \centering
@@ -25,7 +25,7 @@ No Feedback \& Continuous & NFC & 4 \\
 \section{Task Completion Time}
 \label{sec:resultsTaskCompletionTime}
 
-Task completion time is a parameter that counts the total time the participant spent on a specific trial. As mentioned in section \ref{sec:monitoring}, the timer fires when the first touch is performed and stops counting when the confirming sound is being played, which indicates that we successfully hit the target. Also in Feedback trials we use the Dwell selection technique. that adds an 1s delay. In No-Feedback trials there is no such time constraint, since we use the Quickrelease method (no obligatory delay) to perform target selection. 
+Task completion time is a parameter that counts the total time the participant spent on a specific trial. As mentioned in section \ref{sec:monitoring}, the timer fires when the first touch is performed and stops counting when the confirming sound is being played, which indicates that we successfully hit the target. Also in Feedback trials we use the Dwell selection technique which, requires a user to stay inside the target for 1 second. In No-Feedback trials there is no such time constraint, since we use the QuickRelease method (no obligatory delay) to perform target selection. 
 
 We performed a $4 * 7$ (TypeID $*$ N) within subjects ANalysis Of VAriance (ANOVA) \cite{anova}, using the aggregated values of total time. We use ANOVA to determine if the mean values for offset are statistically different. Of course, we can export basic information about the means by just comparing them, but we want to know what do these directional differences in the means infer about our results. ANOVA is able to determine if the differences between condition means are significant.
 
@@ -58,7 +58,7 @@ NFD     &   NFC     &   -0.129      & 0.002
 \label{tab:totaTimeAnova}
 \end{table}
 
-Type of Elements (N), is a parameter that specifies the size of the target for Discrete trials and also the position of it, depending on which is the target bucket out of the N specified. In Continuous trials the size of each trial is independent of the number of elements (N), and is stable, however, N limits the position of the target under a specific region. 
+Type of Elements (N), is a parameter that specifies the size of the target for Discrete trials and also the position of it, depending on which is the target bucket out of the N specified. In Continuous trials the size of each trial is independent of the number of elements (N), and is stable. However, N limits the position of the target under a specific region. 
 Lower values for N result in a wider space range (\emph{N=2} and \emph{TargetBucket=1} means that the target can be anywhere inside the lower semicircle), while higher values significantly narrow this range (\emph{N=16} and \emph{TargetBucket=1} means that the target will be somewhere really close to the minimum value).
 
 We found that task completion time does not statistically differ for \emph{N = 2, 3, 4, 6, 8}. For all those different type of elements the Mean differences are not statistically different, thus we can conclude that they behave quite similarly. However, as expected, the scenario is different for 12 and 16 Elements. For \emph{N=12} we detect significant differences with \emph{N=2} (Sig. = 0.024) and \emph{N=3} (Sig. = 0.017), while for the rest we have no significant differences (Sig. values $>$ 0.05). However \emph{N=16} differs significantly with all the aforementioned \emph{N}'s, apart from \emph{N=12}. 
@@ -349,14 +349,14 @@ Re-touches is a parameter which is meaningful only for Feedback trials. It measu
 As Figure \ref{fig:meanRetouches} illustrates, Feedback \& Discrete retouches are really low, with an average of around \emph{0.6} per trial. However, for Feedback \& Continuous targeting we have a completely different pattern. Re-touches are a lot higher (around \emph{2.0} per trial) with small diversities for \emph{N=2} and \emph{N=12}. However, I point out two significant observations that were extracted from the comments section of the assessment participants filled in after the experiment.
 
 \begin{enumerate}
-     \item Users had many difficulties to hit continuous targets that were really close to the minimum point. Because the red line is randomly position within each bucket, if it was really close to the minimum point, it was really cumbersome for the user to select that target. They usually had to perform several re-touches and re-entries to be able to select the target and then continue to the next trial.  
+     \item Users had many difficulties to hit continuous targets that were really close to the minimum point. Because the red line is randomly positioned within each bucket, in case it is really close to the minimum point, selection of the target becomes a cumbersome task. They usually had to perform several re-touches and re-entries to be able to select the target.  
 
-     \item The above behaviour was also encountered when the target was close to the maximum area but not exactly at it. Then participants faced the same difficulties, to avoid tremolo and stabilize their finger. 
+     \item The above behaviour was also encountered when the target was close to the maximum area but not exactly on it. Then participants faced the same difficulties, to avoid tremolo and stabilize their finger. 
  \end{enumerate} 
 
- We conclude that for target placed really close to the minimum or the maximum calibrated ones, the ability to control the feedback line is significantly decreased. This is probably not happening due to software reasons, but possible because of other ergonomic issues of the finger. 
+ We conclude that for targets placed really close to the minimum or the maximum calibrated ones, the ability to control the feedback line is significantly decreased. This is probably not happening due to software reasons, but possible because of other ergonomic issues of the finger. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{figures/meanRetouches}
 \caption{Target Re-Touches for Feedback Trials}
@@ -374,9 +374,9 @@ As Figure \ref{fig:meanRetouches} illustrates, Feedback \& Discrete retouches ar
 \section{Subjective Preferences}
 \label{resultsSubjectivePreferences}
 
-In Figure \ref{fig:meanQuestGraphs}, the mean values for all the parts of the assessment presented in section \ref{assessment} are illustrated and presented. On each diagram the vertical axis represents the mean values of the corresponding category, which are ranged from 1 to 5 (5 point Likert scale). Generally, higher values mean that participants positively rated the specified category. The horizontal axis corresponds to the type of Trial. One (1) stands for Feedback \& Discrete Targeting, Two (2) for Feedback \& Continuous Targeting, Three (3) for No Feedback \& Discrete Targeting, and Four (4) for No Feedback \& Continuous Targeting. As a result each graph has 4 columns, identified with the numbers 1-4 ( from left to right).
+In Figure \ref{fig:meanQuestGraphs}, the mean values for all the parts of the assessment presented in section \ref{assessment} are illustrated and presented. On each diagram the vertical axis represents the mean values of the corresponding category, which are ranged from 1 to 5 (5 point Likert scale). Generally, higher values mean that participants positively rated the specified category. The horizontal axis corresponds to the type of Trial. Each graph has 4 columns, identified with the numbers 1-4, which correspond to the respective type of trials.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
@@ -423,8 +423,7 @@ In Figure \ref{fig:meanQuestGraphs}, the mean values for all the parts of the as
     \label{fig:meanQuestGraphs}
 \end{figure}
 
-Feedback \& Discrete Targeting (1) scored consistently well across all the above categories. It scored mean values that were always improved than the ones of other trials. In most cases Feedback \& Discrete Targeting were following the queue, and the No Feedback ones were stacked behind.
-
+FD(1) scored consistently well across all the above categories. It scored mean values that were always improved than the ones of other trials. 
 Precisely, Feedback \& Discrete Targeting (1) was ranked higher concerning the Overall Performance (\emph{mean = 3.46 / 5}), Figure \ref{fig:meanOverall}. It can be observed that overall performance is decreased as the identification of the type of trial is increasing. The same behavior is also noticed for Mean Smoothness (\emph{mean = 4.03 / 5}), Figure \ref{fig:meanSmoothness}. However Most importantly, all four techniques ranked amazingly concerning the Fatigue of both the finger and the wrist. Even being an extensive and long experiment, which might not well correspond to everyday use scenario,  the fatigue  participants experienced was in extremely low levels. Finger fatigue had \emph{mean = 1.86}, as shown in Figure \ref{fig:meanFFatigue}, and Wrist fatigue also had \emph{mean = 1.58}, as shown in Figure \ref{fig:meanWFatigue}. Concerning Speed (\emph{mean = 2.82}), Figure \ref{fig:meanSpeed}, all techniques ranged quite uniformly, outlining that the operational speed of the experiment and of each technique in particular was mostly normal. Finally, Smoothness (\emph{mean = 4.03 / 5}), Figure \ref{fig:meanOverall}, ranged also very high for all techniques, which proves that our application is well structured and well corresponds to the movement of the finger.
 
 

@@ -17,22 +17,22 @@ Chip: & A7 chip with 64-bit architecture
 \end{table}
 
 
-Fat Finger can also be ported on any other iPad devices such as iPad Air, however they should run iOS version 7 or higher of the apple mobile operating system (iOS). It should be mentioned that while iPad devices come in different screen sizes and resolutions, porting an App from one device to another is not an issue anymore. This is mainly feasible due to the innovative way of thinking in terms of pixels and points, Apple proposed for using graphics on an iOS device. 
+Fat Finger can also be ported on any other iPad devices that run iOS version 7 or higher of the Apple's mobile operating system (iOS). It should be mentioned that while iPad devices come in different screen sizes and resolutions, porting an App from one device to another is not an issue anymore. This is mainly feasible due to the innovative way of thinking in terms of pixels and points, Apple proposed for using graphics on an iOS device. 
 
 % [reference: http://codeatuts.blogspot.ch/2012/11/interlude-13-pixels-vs-points-in-ios.html]
 
-In particular, since iOS 4, dimensions are measured in \textbf{“points”} instead of pixels. All coordinate values and distances are specified using points, which are floating-point values. One point can refer to one or more pixels. The measurable size of a point varies from device to device and is largely irrelevant. The most important thing about using points is that they provide a fixed frame of reference for drawing graphics on screen. To have an inside look on how points correspond to pixels, imagine that an iPad screen 768 x 1024 points and is size independent. Thus, this point resolution scales to the following pixel resolution for some referential models:
+In particular, since iOS 4, dimensions are measured in \textbf{“points”} instead of pixels. All coordinate values and distances are specified using points, which are floating-point values. One point can refer to one or more pixels. The measurable size of a point varies from device to device and is largely irrelevant. Points provide a fixed frame of reference for drawing graphics on screen. To have an inside look on how points correspond to pixels, imagine that an iPad screen 768 x 1024 points and is size independent. Thus, this point resolution scales to the following pixel resolution for some referential models:
 
 
 \begin{itemize}
     \item \textbf{iPad 1} - 768 x 1024 pixels (i.e. a scale factor of 1.0)
     \item \textbf{iPad Air} - 1536 x 2048 pixels (i.e. a scale factor of 2.0)
-    \item \textbf{iPad Mini  with Retina Display} - 1536 x 2048 pixels (i.e. a scale factor of 2.0)
+    \item \textbf{iPad Mini - Retina Display} - 1536 x 2048 pixels (scale factor of 2.0)
  \end{itemize}
 
-Diving more into how Apple treats graphics, we observe that when drawing or doing any kind of graphic operations, you should specify your measurements in points for all devices, and iOS automatically draws everything to the right proportion on the screen.  The outcome is that when you draw the same content on two similar devices, it appears to be about the same size on both devices, and is independent of the screen resolution each of them has. 
+When performing graphical operations, you should specify your measurements in points for all devices, and iOS automatically draws everything to the right proportion on the screen.  The outcome is that when you draw the same content on two similar devices, it has the same scale on both. 
 
-The   code   has   been   developed in Objective C language using Xcode. Xcode is an Integrated Development Environment (IDE) containing a suite of software development tools created by Apple for developing software for both OS X and iOS. Full Documentation for developing iOS applications is also included, alongside with many other utilities that are designed to enhance your coding experience (Tester, Debugger, etc.). Apple along with the release of iOS 8, last June, also released a new programming language for coding Apple software, \textbf{Swift}.
+The   code   has   been   developed in Objective C language using Xcode. Xcode is an Integrated Development Environment (IDE)  created by Apple for developing software for both OS X and iOS. Full Documentation for developing iOS applications is also included, alongside with many other utilities that are designed to enhance your coding experience (Tester, Debugger, etc.). Apple along with the release of iOS 8, last June, also released a new programming language for coding Apple software, \textbf{Swift}.
 
 \emph{"Swift is a multi-paradigm, compiled programming language created by Apple for iOS and OS X development. Introduced at Apple's 2014 Worldwide Developers Conference, Swift is designed to work with Apple's Cocoa and Cocoa Touch frameworks and the large body of existing Objective-C code written for Apple products. Swift is intended to be more resilient to erroneous code ("safer") than Objective-C. It is built with the LLVM compiler included in Xcode 6, and uses the Objective-C runtime, allowing C, Objective-C, Objective-C++ and Swift code to run within a single program."} \cite{wikiSwift}
 
@@ -56,7 +56,8 @@ The   code   has   been   developed in Objective C language using Xcode. Xcode i
 \section{Fat Finger Application Description}
 
 
-Fat Finger is an application which has been built to test the capabilities and the limits of the index finger's operational skills, on using the contact area touching the screen for integrating with a mobile device. The interaction with the finger requires an interface that will always listen to touch events on the screen. Thus, Fat Finger, whilst not being a complete application, it embeds all the infrastructure needed to support the new interaction we are proposing. The basic scenario is the following; whenever a finger is touching the screen we should be able to calculate the contact area between the finger and the screen. After obtaining that raw data, we should use that to interact with the interface provided. Despite how simple it may seem at a first glance, Apple does not provide a way to calculate this contact area, and neither does with the shape of the area covered by the finger. The iPad’s API only provides the major radius in pixels of a contact points' ellipse, which can be in rough lines obtained as follows:
+Fat Finger is an application which has been built to test the capabilities and the limits of the index finger's operational skills, on using the contact area touching the screen for integrating with a mobile device. The interaction with the finger requires an interface that will always listen to touch events on the screen. Thus, Fat Finger, whilst not being a complete application, it embeds all the infrastructure needed to support the new interaction we are proposing. The basic scenario is the following:
+ \emph{Whenever a finger is touching the screen we should be able to calculate the contact area between the finger and the screen.} After obtaining that raw data, we should use that to interact with the interface provided. Despite how simple it may seem at a first glance, Apple does not provide a way to calculate this contact area, and neither does with the shape of the area covered by the finger. The iPad’s API only provides the major radius in pixels of a contact points' ellipse, which can be in rough lines obtained as follows:
 
 
 
@@ -79,25 +80,25 @@ As a result, we can obtain only the major radius of the area covered by the fing
 \end{itemize}	
 	
 Thus, whenever each of the first three functions are getting called, we can measure the size of the area covered by the finger. The problem arises exactly when we realize that each of the above functions is called when the location of the touch changes, and not when the contact area changes. In other words, a new event is triggered only when the center point of the touching area changes. Indeed, there are occasions that the contact area is changing without alternating the center of the ellipsis. 
-The above behaviour, is the second most significant drawback I encountered while trying to bring Fat Finger into life. It is a major drawback, since it results in non continuous observation of the contact area touching the screen, and there is not an existing way of alternating this behaviour ourselves. We are constrained in measuring the area if the location of the finger has been changed. Changes in contact area that do not alter the location in the screen, can not be measured. However, after investigation we realized that this circumstances are extremely rare under normal use so, despite the limitations we faced our methodology works fine.
+ It results in non continuous observation of the contact area touching the screen, and there is not an existing way of alternating this behaviour ourselves. We are constrained in measuring the area if the location of the finger has been changed. Changes in contact area that do not alter the location in the screen, can not be measured. However, after investigation we realized that this circumstances are extremely rare under normal use so, despite the limitations we faced, our methodology works fine.
 
 
 \subsection{Basic WorkFlow}
  
- Fat Finger application can be divided on the following modules - states:
+ Fat Finger application can be divided on the following modules:
 
  \begin{itemize}
 \item \textbf{Start App} - Represents the launching of the application. 
 \item \textbf{Register Participant} - In this module, we assign a new unique ID to each participant through a custom form.
 \item \textbf{Calibrate} - Participant can calibrate his finger.
 \item \textbf{Visualize} - Participant can visualize the previously obtained calibrated values. If he is not satisfied with the outcome, he can jump back to Calibration mode and calibrate again.
-\item \textbf{Trials - Experiment} - This is the main part of the experiment, in which all the Trails are included.
+\item \textbf{Trials - Experiment} - This is the main part of the experiment, in which all trials are included.
 \item \textbf{End of Experiment} - After having finished the experiment trials, experiment is finished.
  \end{itemize}
 
- The flowchart of those modules can be observed on Figure \ref{fig:FFBasicFlow}. As we can notice there is a circular connection between Calibrate \& Visualize. This is due to the fact that we can calibrate and then visualize as many times as we need or want to. When we are satisfied with the calibrated values, we may proceed to the Experiment Trials. 
+ The flowchart of those modules can be observed on Figure \ref{fig:FFBasicFlow}. We notice that there is a circular connection between Calibrate \& Visualize. This is due to the fact that we can calibrate and then visualize as many times as we need or want to. When we are satisfied with the calibrated values, we may proceed to the Experiment Trials. 
 
- \begin{figure}[H]
+ \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{figures/FFBasicFlow.png}
 \caption{Fat Finger - Abstract Flowchart of Basic Modules}
@@ -112,22 +113,22 @@ The above behaviour, is the second most significant drawback I encountered while
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Basic Design of a Trial}
-Each Trial has one basic design and interface. Our target was to find the most obvious and physical way to be able to present all the aspects we wanted, on screen. I ended up on using the design, illustrated in Figure \ref{fig:FFBasicTrialInterface}. The challenging part was in finding a competitive alternative to the simple bar design. The basic usage scenario is:
+Each Trial has one basic design and interface. Our target was to find the most obvious and physical way to be able to on-screen present all the aspects we wanted. I ended up on using the design, illustrated in Figure \ref{fig:FFBasicTrialInterface}. The challenging part was in finding a competitive alternative to the simple bar design. The basic usage scenario is:
 
 \emph{The user should move his finger, in a way to alternate the contact area between the screen and his finger. There should be an indicator that will give him feedback. He should know the amount of pressure his is applying to the screen, through a visual representation.}
 
 
 
- \begin{figure}[H]
+ \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{figures/FFBasicTrialInterface.png}
 \caption{Fat Finger - Basic Trial Interface}
 \label{fig:FFBasicTrialInterface}
 \end{figure}
 
-In Figure \ref{fig:FFBasicTrialInterface} we can observe that our interface has 4 regions and all of them are placed on an iPad screen. It is obvious that the whole interface is based on overlapping circles with common center. Table \ref{tab:ffRegions} illustrates the correspondence between Numbers and regions.
+In Figure \ref{fig:FFBasicTrialInterface} we can observe that our interface has 4 regions, all of them are placed on an iPad screen, and that the whole interface is based on overlapping circles with common center. Table \ref{tab:ffRegions} illustrates the correspondence between Numbers and regions.
 
-\begin{table}[H]
+\begin{table}[h]
 \centering
 \begin{tabular}{l || l }
 Region No & Description \\
@@ -145,7 +146,7 @@ To better assimilate this design lets use a driving example. \emph{Imagine that 
 
 Now we are ready to move to the next level. Instead of familiarizing with this simple and purely designed idea, I decided to use the circle as the fundamental design shape. Region 3 (Table \ref{tab:ffRegions}) will be alternated while the participant is moving his finger, so as to perfectly map his movement. Therefore, we will have a partially filled circle for the different contact areas (Figure \ref{fig:FFPartlyFilled}).
 
- \begin{figure}[H]
+ \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{figures/FFPartlyFilled.png}
 \caption{Fat Finger - Basic interface during operation}
@@ -177,11 +178,11 @@ From Figure \ref{fig:FFPartlyFilled} we can point out many significant character
 % This section is devoted to present the different Trial categories that are encountered on Fat Finger.
 Fat Finger consist of four (4) Trial categories. Those 4 categories are based on the values of 2 binary variables \textbf{TARGET \& FEEDBACK}. The values of this variables can be:
 \begin{itemize}
-	\item \textbf{TARGET} = \textbf{DISCRETE} or \textbf{CONTINUOUS}
-	\item \textbf{FEEDBACK} = be \textbf{FEEDBACK} or \textbf{NO FEEDBACK}
+	\item \textbf{Target} = \textbf{Discrete} or \textbf{Continuous}
+	\item \textbf{Feedback} = be \textbf{Feedback} or \textbf{No Feedback}
 \end{itemize}
 
-Producing all possible combinations of values from TARGET and FEEDBACK we end up having the 4 types we have already mentioned. All possible trials one can encountered belong to one of the those types, which are:
+Producing all possible combinations of values from \textbf{Target} and \textbf{Feedback} we end up having the 4 types we have already mentioned. All possible trials one can encountered belong to one of the those types, which are:
 
 
 \begin{table}[H]
@@ -202,7 +203,7 @@ During the experiment, those 4 types (Table \ref{tab:ffTrialCateg}) will occur m
 
 \textbf{N} varies inversely as the value of \textbf{Buckets}. In an inverse variation, the values of the two variables change in an opposite manner - as one value decreases, the other increases. Therefore, as N increases, the range of each bucket decreases. Moreover the ranges of all buckets should add up to 360 degrees. 
 
-At this point, the values for the two basic variables \textbf{TARGET} and \textbf{FEEDBACK} will be thoroughly analyzed.
+At this point, the values for the two basic variables \textbf{Target} and \textbf{Feedback} will be thoroughly analyzed.
 
 
 
@@ -211,15 +212,15 @@ At this point, the values for the two basic variables \textbf{TARGET} and \textb
 %% Explain the value of each variable
 
 \begin{itemize}
-	\item \textbf{Discrete}. This only relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}), so the formatting of the targets. In this type, targets are discrete, meaning that Region 2 is divided in N buckets, but only one of them is activated. The activated bucket is coloured in red and acts as the target for this trial. All other inactive buckets are coloured in Gray. 
+	\item \textbf{Discrete}. This only relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}), so the formatting of the targets. In this type, targets are discrete, meaning that Region 2 is divided in N buckets, but only one of them is activated. The activated bucket is coloured in red and acts as the target for this trial. All other inactive buckets are coloured in gray. 
 
-	\item \textbf{Continuous}. This also relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}) exclusively. In this type, Region 2 is not divided into buckets, at least visible. We think in term of targets, but we do not present them graphically. The target is just one small red line (a bucket with 1 degree range). However it might have been impossible for the user to select such a tiny target, so we offer an offset area which is delimited with two yellow lines. The position of the target is not random. As I mentioned before, we still think in term of buckets. But instead of considering the whole bucket as a target, we just randomly select a small region inside that bucket, and draw the red line there. Thus, we have the same amount of Trials as in the Discrete type.
+	\item \textbf{Continuous}. This also relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}) exclusively. In this type, Region 2 is not divided into buckets, at least visible. We think in term of targets, but we do not present them graphically. The target is just one small red line (a bucket with 1 degree range). However it might be impossible for the user to select such a tiny target, so we offer an offset area which is delimited with two yellow lines. The position of the target is not random. As I mentioned before, we still think in term of buckets. But instead of considering the whole bucket as a target, we just randomly select a small region inside that bucket, and draw the red line there. Thus, we have the same amount of trials as in the Discrete type.
 
-	\item \textbf{Feedback} is related with Region 3 (Figure \ref{fig:FFBasicTrialInterface}). In this type, Region 3 is visible, meaning that we have continuous feedback while we are moving our finger. In order to select a target the user has to keep the edge of the blue line (Region 3) inside the red bucket for at least one second. Then a short sound confirms the selection and the trial is dismissed. Summarizing, the mission is: 
+	\item \textbf{Feedback} is related with Region 3 (Figure \ref{fig:FFBasicTrialInterface}). In this type, Region 3 is visible, meaning that we have continuous feedback while we are moving our finger. In order to select a target the user has to perform the Dwell technique. Thus, keep the edge of the blue line (Region 3) inside the red bucket for at least one second. Then a short sound confirms the selection and the trial is dismissed. Summarizing, the mission is: 
 
-	\emph{Keep the edge of the blue "line" inside the red target for one second}.
+	\emph{Keep the edge of the blue "line" inside the red target for 1 second}.
 
-	\item \textbf{No FeedBack} is also related with region 3 (Figure \ref{fig:FFBasicTrialInterface}). In this type, Region 3 is now invisible. Therefore we do not have feedback indicator while we are alternating the contact area between our finger and the screen. Thus we need to memorize the movement and be able to predict the position of the edge of the "blue" region. To confirm selection, user has to lift his finger from the screen. The software will then choose the last contact area size,  before the lift as the one the user implied. As a consequence we can only lift the finger one time. We are not allowed to perform retouches, because on the first lift, target selection will be performed. 
+	\item \textbf{No FeedBack} is also related with region 3 (Figure \ref{fig:FFBasicTrialInterface}). In this type, Region 3 is now invisible. Therefore we do not have feedback indicator while we are alternating the contact area between our finger and the screen. Thus we need to memorize the movement and be able to predict the position of the edge of the "blue" region. To confirm selection, user has to lift his finger from the screen, or perform the QuickRelease selection technique. The software will then choose the last contact area size,  before the lift as the one the user implied. As a consequence we can only lift the finger once. We are not allowed to perform retouches, because on the first lift, target selection will be performed. 
 
 	It should also be mentioned that, in this type of trials, we are not forced to hit the target successfully. We just make a prediction and then lift our hand. Our input will be recorded and then displayed to us through a graphical Confirmation Interface.  Summarizing, in this type, our mission is:
 
@@ -235,7 +236,7 @@ We have now explained and introduced all the necessary background, and we are re
 \subsection{Feedback \& Discrete Targeting}
 
 
-In this type of trials, we can understand that the targets will be discrete and there will also be feedback on our input. Figure \ref{fig:FD} presents the interface of this type. As we can see both Region 2 and 3 (Figure \ref{fig:FFBasicTrialInterface}) exist. Since we have \emph{Discrete} targets, Region 2 is separated in $n$ buckets, all with equal size. The target is the one coloured in red, and all others are inactive and coloured in gray. On the other hand, \emph{Feedback} keyword is mentioned too, which means that the blue circle (Region 3) exists. The movement of the blue region corresponds to the movement of our hand. To accomplish this trial, the participant needs to keep the moving edge of the blue region inside the range of the target (red bucket), for at least 1 second. Then a confirmation sound is being played, which proceed us to the next trial.
+In this type of trials, we can understand that the targets will be discrete and there will also be feedback on our input. Figure \ref{fig:FD} presents the interface of this type. As we can see both Region 2 and 3 (Figure \ref{fig:FFBasicTrialInterface}) exist. Since we have \emph{Discrete} targets, Region 2 is separated in $n$ buckets, all with equal size. The target is the one coloured in red, and all others are inactive and coloured in gray. On the other hand, \emph{Feedback} keyword is mentioned too, which means that the blue circle (Region 3) exists. The movement of the blue region corresponds to the movement of our hand. To accomplish this trial, the participant needs to perform the Dwell selection technique.
 
 \begin{figure}[H]
 \centering
@@ -265,7 +266,7 @@ In this occasion, we are still provided with feedback on our input, but the targ
 %%%%%%%%%%%%%%%%%%%%%
 \subsection{No Feedback \& Discrete Targeting}
 
-The rules for \emph{Discrete} targets apply and here. Thus, Region 2 (Figure \ref{fig:FFBasicTrialInterface}) is separated in $N$ buckets, all with equal size. Variable $N$ mostly specifies the difficulty of the trials. The target is the one coloured in red, and all others are inactive and coloured in gray. This category differs from the aforementioned because it is of type \emph{No Feedback}. That means that Region 3 (Figure \ref{fig:FFBasicTrialInterface}) does not exist. So, in the beginning we encounter the interface illustrated in Figure \ref{fig:NFD}. Our task  is to \textbf{a}) touch the screen, \textbf{b}) predict the contact area needed to select the target and \textbf{c}), confirm selection by lifting the finger form the screen. After confirming selection, we face the \textbf{Confirming Interface} shown in Figure \ref{fig:NFDConfirm}, in which we can observe our performance in the trials. Did we hit that target or not? This input can be used as a learning parameter which will help us to improve our performance as we move through the trials.
+The rules for \emph{Discrete} targets apply and here. Thus, Region 2 (Figure \ref{fig:FFBasicTrialInterface}) is separated in $N$ buckets, all with equal size. Variable $N$ mostly specifies the difficulty of the trials. The target is the one coloured in red, and all others are inactive and coloured in gray. This category differs from the aforementioned because it is of type \emph{No Feedback}. That means that Region 3 (Figure \ref{fig:FFBasicTrialInterface}) does not exist. So, in the beginning we encounter the interface illustrated in Figure \ref{fig:NFD}. Our task  is to \textbf{a}) touch the screen, \textbf{b}) predict the contact area needed to select the target and \textbf{c}), confirm selection with QuickRelease. After confirming selection, we face the \textbf{Confirming Interface} shown in Figure \ref{fig:NFDConfirm}, in which we can observe our performance in the trials. Did we hit that target or not? This input can be used as a learning parameter which will help us to improve our performance as we move through the trials.
 
 \begin{figure}[H]
 \centering
@@ -313,11 +314,11 @@ Figure \ref{fig:NFND} presents the interface of the \emph{No Feedback \& Continu
 
 % Explain   the   repetitions,   randomization,   and   generally   how   the   sequence   of each experiment is calculated.
 
-Thus far we have explained all the main characteristics of our experiment. Now we should focus on the final sequence of the trials and the whole structure of the experiment. In this experiment we want to investigate 7 different N's, or bucket sizes. N can have the following values:
+Thus far we have explained all the main characteristics of our experiment. Now we should focus on the final sequence of the trials and the whole structure of the experiment. In this experiment we want to investigate 7 different N's, or bucket sizes, which can have the following values:
 
 N = [2,3,4,6,8,12,16]
 
-For each n we have the same amount of related targets. For instance if $N=2$, then we have two available targets, one for each bucket. If $N=4$, the we have 4 possible targets, etc.
+For each N we have the same amount of related targets. For instance if $N=2$, then we have two available targets, one for each bucket. If $N=4$, the we have 4 possible targets, etc.
 As a result for all the above mentioned values for N we can gave the following number of possible targets:
 
 $2(N=2)+3(N=3)+4(N=4)+6(N=6)+8(N=8)+12(N=12)+16(N=16) = 51 targets$
@@ -328,7 +329,7 @@ For each of the above categories we conduct all the aforementioned targets. So t
 $51*4 = 204$. Furthermore we need to randomize their order just to make sure that it will not have any effect in our study. After the randomization takes place we say that we have 1 \textbf{Repetition} of the Trials. Figure \ref{fig:ffRepetition} graphically illustrates this procedure.
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/repetition.png}
 \caption{Repetition Calculation}
@@ -336,22 +337,24 @@ $51*4 = 204$. Furthermore we need to randomize their order just to make sure tha
 \end{figure}
 
 
-This experiment contains 3 repetitions of those trials and not only 1. So in Total we will have $203*3repetitions = 612 trials$. We chose to have 3 Repetitions for the following 2 main reasons. 
+However, this experiment contains 3 repetitions of those trials and not only 1. So in total we will have $203*3repetitions = 612 trials$. We chose to have 3 Repetitions for the following 2 main reasons. 
 
 \begin{itemize}
-	\item There is no Warm up session for this experiment. Instead of having separate trials to prepare the users for this experiment we chose to combine the Learning phase with the 1st repetition of the Trials. That way we can observe the Learning effect taking place. 
+	\item There is no warm-up session for this experiment. Instead of having separate trials to train users, we chose to combine the Learning phase with the 1st repetition of the Trials. That way we will be able to observe and study the pace with which users and are learning this new interaction technique.
 
-	\item The experiment should last enough so as to give users the time to absorb the information given, familiarize with the environment and the technique and also explore whether side effects as distraction of attention and fatigue have an impact on the performance of the users.
+	\item The experiment should last enough so as to give users the time to absorb the information given, familiarize with the environment and technique and also explore whether side effects as distraction of attention and fatigue have an impact on their performance.
 \end{itemize}
 
 Figure \ref{fig:ffRepetition} graphically illustrates how the repetitions are combined together. It also gives an overview of the work-flow of Fat Finger.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/ffRepetitions.png}
 \caption{Fat finger - Generalized experiment flow of repetitions}
 \label{fig:ffRepetitions}
 \end{figure}
+
+Finally it should be mentioned that between each trial of this application there exist a button that should be pressed in order to proceed to the next trial. It is annotated with the text: "Next Trial" and the reason it exists is just for allowing users to take smalls breaks whenever needed. While this button is visible, no counter or other mechanisms are fired. Finally it has the same shape, size and position as Region 1 in Figure \ref{fig:FFBasicTrialInterface}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -362,7 +365,7 @@ Figure \ref{fig:ffRepetition} graphically illustrates how the repetitions are co
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data Manipulation}
 
-Data Monitoring and Exporting are of significant importance when we have to deal with the accomplishment of an experiment. When performing a user study you need to decide which parameters you are going to monitor, and to find a way to measure them. Code-wise, you need to implement a software that is able to calculate all the metrics you want to observe, and then store them somewhere consistently. After the experiment is finished, it is truly crucial to be able to export those data from the place they are stored into a common format that is accessible from another program. Summarizing we have a three step process when we conduct an experiment. 
+Data Monitoring and Exporting are of significant importance when we have to deal with the accomplishment of an experiment. When performing a user study you need to decide which parameters you are going to monitor, and to find a way to measure them. Code-wise, you need to implement a software that is able to calculate all the metrics you want to observe, and then store them somewhere consistently. After the experiment is finished, it is truly crucial to be able to export those data from the place they are stored into a common format that is accessible from another program. Summarizing we have a three-step process when we conduct an experiment. 
 
 \begin{enumerate}
 	\item Decide which parameters to measure.
@@ -370,7 +373,7 @@ Data Monitoring and Exporting are of significant importance when we have to deal
 	\item Export the data to appropriate format (.xls, .csv, etc.)
 \end{enumerate}
 
-Our approach for the first two points is analyzed on section \ref{sec:monitoring}, while for the latter on section \ref{sec:exporting}.
+Our approach for the first two points is analyzed on section \ref{sec:monitoring}, while for the latter one on section \ref{sec:exporting}.
 %%%%%%%%
 %%%%%%%%
 %%%%%%%%
@@ -393,8 +396,8 @@ Name & Description & Field of Values\\
 \textbf{trialID} & Incremental id of this trial & [1, 2, ..., 612] \\
 \textbf{typeID} & Id of the type of the trial & [1,2,3,4] \\
 \textbf{N} & Total number of Buckets & [2,3,4,6,8,12,16] \\
-\textbf{min} & the minimum calibrated radius & $Float > 0$ \\
-\textbf{max} & the maximum calibrated radius & $Float > 0$ \\
+\textbf{min} & Minimum calibrated radius & $Float > 0$ \\
+\textbf{max} & Maximum calibrated radius & $Float > 0$ \\
 \textbf{rawInputValue} & Raw Value between Min and Max & Float number \\
 \textbf{reEntries} & Number of Target Re-entries & $Decimal >= 0$ \\
 \textbf{repetitionID} & Repetition id they belong to & [1,2,3] \\
@@ -406,28 +409,28 @@ Name & Description & Field of Values\\
 \label{tab:ffUniData}
 \end{table}
 
-Combining the above values, apart form being able to uniquely identify the trials of the experiment, we can also reconstruct the whole experiment. This can be achieved, because we are storing the outcome of each trials, the rawData we collected form the user, the total time, etc. Now, we should further analyse each of those parameters:
+Combining the above values, apart from giving us the possibility to uniquely identify the trials of the experiment, we can also reconstruct the whole experiment. This can be achieved, because we are storing the outcome of each trials, the rawData we collected form the user, the total time, etc. Now, we should further analyse each of those parameters:
 
 \begin{itemize}
-	\item \textbf{trialID}. Unique identifier for each trial. Most importantly it specifies the order of appearance of the experiments. The first trial with has id 1, the second 2 etc. 
+	\item \textbf{trialID}. Unique, auto-incremented identifier for each trial. Most importantly it specifies the order of appearance of the experiments. 
 
-	\item \textbf{N}. Specifies the number of Buckets. \textbf{N} is an indicator that is related, at least in the Feedback trials, with the difficulty. This study is mainly concerned in specifying an upper limit for the number of identifiable levels in the contact area range. Thus, N is the sorting parameter for being able to distinguish the upper limit for those levels. 
+	\item \textbf{N}. Specifies the number of buckets. \textbf{N} is an indicator that is related, at least in the Feedback trials, with the difficulty. This study is mainly concerned in specifying an upper limit for the number of identifiable levels in the contact area range. Thus, N is the sorting parameter for being able to distinguish the upper limit for those levels. 
 	
 	\item \textbf{min}. The minimum value for the PathMajorRadius we collected from the calibration. During the calibration process, user can calibrate his finger as many times as he want. When he proceeds to the experiment, we collect the lastly calibrated values and store them accordingly.
 	
 	\item \textbf{max}. The same applies here too, except that we are referring to the maximum value of the PathMajorRadius.  
 	
-	\item \textbf{rawInputValue}. This is the PathMajorRadius value, for the contact area that hit the target. For Feedback trials, it is the last touch input size exactly when the 1 second delay passed. For No feedback, it is the area just before lifting our finger.
+	\item \textbf{rawInputValue}. This is the PathMajorRadius value, for the contact area that hit the target. For Feedback trials, it is the last touch input size exactly after the 1 second delay has passed. For No feedback, it is the area just before lifting our finger.
 	
 	\item \textbf{reEntries}. Counts the times we went outside the target region. It starts counting after the initial entry to the target.
 	
 	\item \textbf{repetitionID}. Identifies in which of the three repetitions this trial belongs to.  
 	
-	\item \textbf{reTouches}. Counts how many times we lifted our finger off the screen. Of course for \emph{No Feedback} trials this parameter is always zero since we confirm target selection by lifting our finger from the screen.
+	\item \textbf{reTouches}. Counts the times we lifted our finger off the screen. Of course for \emph{No Feedback} trials this parameter is always zero since we confirm target selection by lifting our finger from the screen.
 	
 	\item \textbf{target}. Specifies which of the buckets is the target. Thus it can take values from 1 to N.
 	
-	\item \textbf{totalTime} Total completion time of the trial. The timer fires when the first touch is performed and stops when the confirming sound is being played. As a result \emph{Feedback} trials will have values $>=$ 1 second. This is because one second is the duration  someone has to inside the target region to confirm target selection. On the other hand, on \emph{No feedback} trials, durations are generally shorter.
+	\item \textbf{totalTime} Total completion time of the trial. The timer fires when the first touch is performed and stops when the confirming sound is being played. As a result \emph{Feedback} trials will have values $>=$ 1 second. This is because one second is the duration  someone has to be inside the target region to confirm target selection. On the other hand, on \emph{No feedback} trials, durations are generally shorter.
 \end{itemize}
 
 
@@ -435,7 +438,7 @@ Combining the above values, apart form being able to uniquely identify the trial
 The above parameters are measured for all 4 types of trials. However, all except for \emph{Feedback\& Discrete} required some extra monitoring. \textbf{Feedback \& Continuous} has the following two extra measured parameters that are also presented in Table \ref{tab:ffFNDData}:
 
 \begin{itemize}
-	\item \textbf{targetPosition}. Defines the exact position of the Target. In this type, target is represented as a thin red line. The position will always be inside the \textbf{target}-th bucket out of the \textbf{n} in total. However since it is randomly positioned inside this bucket we needed to record, its accurate position. Value monitored is between \textbf{min} and \textbf{max}. To transform the position into circle degrees we can use the type $PositionInDegrees = \frac{targetPosition-min}{max-min}360$.
+	\item \textbf{targetPosition}. Defines the exact position of the Target. In this type, target is represented as a thin red line. The position will always be inside the \textbf{target}-th bucket out of the \textbf{n} in total. However since it is randomly positioned inside this bucket, we needed to record its accurate position. Value monitored is between \textbf{min} and \textbf{max}. To transform the position into circle degrees we can use the type $PositionInDegrees = \frac{targetPosition-min}{max-min}360$.
 	\item \textbf{offset} Indicates how far we were from the target. It can be thought as an error rate too. The higher the offset the higher the error we performed on our selection. Positive values mean that we hit somewhere after the target. Negative values mean that we hit before it. Also offset is measured in percentage. If we want to find how many degrees we were off the target then we can just use the type: $DegreesOff = offset*360$
 \end{itemize}
 
@@ -456,10 +459,10 @@ Name & Description & Field of Values \\
 \end{table}
 
 
-\textbf{No Feedback \& Discrete} targeting requires a different set of extra parameters to be measured. Feedback region does not exist in this type, which means that users have to predict where the feedback region is. This type of Trial requires longer learning time. Thus for the initial trials we expect that participants predictions-guessing will not be very accurate. As a result, the error rates / offset will be high. To monitor that we use the following two parameters as shown in Table \ref{tab:ffNFDData}:
+\textbf{No Feedback \& Discrete} targeting requires a different set of extra parameters to be measured. Feedback region does not exist in this type, which means that users have to predict where it is. This type of trial requires longer learning time. Thus for the initial trials we expect that participants predictions will not be very accurate. As a result, offset will be high. To monitor that we use the following two parameters as shown in Table \ref{tab:ffNFDData}:
 \begin{itemize}
-	\item \textbf{hitInsideTarget} As it can be inferred form its name, it indicates whether we actually hit inside the Target or outside. 
-	\item \textbf{offset} mostly represents the error in percentage over the whole range. In \emph{No Feedback} trials error can be extremely high as there is no limitation that the user can confirm selection, while explicitly being inside the target. Thus positive values mean that the selection was performed at a point after the center of the target, while negative values stand for before.
+	\item \textbf{hitInsideTarget} As it can be inferred form its name, it indicates whether we actually hit inside the target or outside. 
+	\item \textbf{offset} mostly represents the error in percentage over the whole range. In \emph{No Feedback} trials error can be extremely high as there is no limitation in performing in-target selection. Thus positive values mean that the selection was performed at a point after the center of the target, while negative values stand for before.
 \end{itemize}
 
 
@@ -478,7 +481,7 @@ Name & Description & Field of Values  \\
 \label{tab:ffNFDData}
 \end{table}
 
-Finally, in \textbf{No Feedback \& Continuous Targeting} we meet a combination of the extra parameters we have already mentioned. It is thought to be the most tough type of experiment, since we neither have feedback, nor small targets. To better monitor this type we use those extra supplementary parameters, as illustrated in Table \ref{tab:ffNFNDData}. Each of them has been already explained and analyzed in the aforementioned types.
+Finally, in \textbf{No Feedback \& Continuous Targeting} we meet a combination of the extra parameters we have already mentioned. To better monitor this type we use the extra supplementary parameters, illustrated in Table \ref{tab:ffNFNDData}. Each of them has been already explained and analyzed in the aforementioned types.
 
 
 %%%%
@@ -506,15 +509,15 @@ Name & Description & Field of Values \\
 \subsection{Exporting}
 \label{sec:exporting}
 
-Monitoring the results and saving them into a database was half the way towards the fulfilment of our study. There is a need to export them into a reasonable format so that thy can be imported into a Statical Analysis tool. Fat Finger used Core Data for storing all the aforementioned parameters.
+Monitoring the results and saving them into a database was half the way towards the fulfilment of our goal. There is a need to export them into a reasonable format so that they can be imported into a statical analysis tool. Fat Finger used Core Data for storing all the aforementioned parameters.
 \emph{"Core Data is an object graph and persistence framework provided by Apple. It allows data organized by the relational entity–attribute model to be serialized into XML, binary, or SQLite stores. The data can be manipulated using higher level objects representing entities and their relationships. Core Data manages the serialized version, providing object life-cycle and object graph management, including persistence. Core Data interfaces directly with SQLite, insulating the developer from the underlying SQL."} \cite{coreData}
 
-Core Data does not provide a specific output data format, neither has an automatic exporting tool. However, since we have full access on the data stored in database we can implement our own customized export tool. For the purposes of this study, I used the Comma Separated Values \textbf{.csv} format. The output file has the following format:
+Core Data does not provide a specific output data format, neither has an automatic exporting tool. However, since we have full access on the data stored in database we can implement our own customized export tool. For the purposes of this study, I used the Comma Separated Values (\textbf{.csv}) format. The output file has the following format:
 
 \begin{itemize}
 	\item Each line represents a case. In other words, each line represents the data collected for a specific trial of a user.
 	\item Each case can be uniquely identified by the combination of the usedID and trialID parameters.
-	\item Each user performed 612 trials. Those he will be presented by 612 unique cases - lines.
+	\item Each user performed 612 trials. Those he will be presented by 612 unique cases.
 	\item Each variable (n, targets, userID, totalTime etc.) is represented by a column.
 \end{itemize}
 
