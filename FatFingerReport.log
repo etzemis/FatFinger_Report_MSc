@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.5)  28 NOV 2014 13:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.5)  28 NOV 2014 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -832,7 +832,7 @@ Chapter 4.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 66.
  [36]
-<figures/FFBasicFlow.png, id=596, 1173.38374pt x 394.47375pt>
+<figures/FFBasicFlow.png, id=599, 1173.38374pt x 394.47375pt>
 File: figures/FFBasicFlow.png Graphic file (type png)
 
 <use figures/FFBasicFlow.png>
@@ -842,7 +842,7 @@ Package pdftex.def Info: figures/FFBasicFlow.png used on input line 103.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37] <figures/FFBasicTrialInterface.png, id=603, 770.88pt x 955.57pt>
+[37] <figures/FFBasicTrialInterface.png, id=606, 770.88pt x 955.57pt>
 File: figures/FFBasicTrialInterface.png Graphic file (type png)
 
 <use figures/FFBasicTrialInterface.png>
@@ -853,20 +853,20 @@ Package pdftex.def Info: figures/FFBasicTrialInterface.png used on input line 1
 Underfull \vbox (badness 2707) has occurred while \output is active []
 
  [38 <./figures/FFBasicFlow.png> <./figures/FFBasicTrialInterface.png>]
-<figures/FFPartlyFilled.png, id=614, 770.88pt x 955.57pt>
+<figures/FFPartlyFilled.png, id=617, 770.88pt x 955.57pt>
 File: figures/FFPartlyFilled.png Graphic file (type png)
 
 <use figures/FFPartlyFilled.png>
 Package pdftex.def Info: figures/FFPartlyFilled.png used on input line 151.
 (pdftex.def)             Requested size: 231.26578pt x 286.67322pt.
  [39 <./figures/FFPartlyFilled.png>] [40]
-[41] <figures/FD.png, id=641, 1541.76pt x 2055.68pt>
+[41] <figures/FD.png, id=644, 1541.76pt x 2055.68pt>
 File: figures/FD.png Graphic file (type png)
  <use figures/FD.png>
 Package pdftex.def Info: figures/FD.png used on input line 243.
 (pdftex.def)             Requested size: 107.93422pt x 143.9123pt.
 
-<figures/FND.png, id=644, 1541.76pt x 2055.68pt>
+<figures/FND.png, id=647, 1541.76pt x 2055.68pt>
 File: figures/FND.png Graphic file (type png)
  <use figures/FND.png>
 Package pdftex.def Info: figures/FND.png used on input line 259.
@@ -874,19 +874,19 @@ Package pdftex.def Info: figures/FND.png used on input line 259.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./figures/FD.png>] <figures/NFD.png, id=654, 1541.76pt x 2055.68pt>
+ [42 <./figures/FD.png>] <figures/NFD.png, id=657, 1541.76pt x 2055.68pt>
 File: figures/NFD.png Graphic file (type png)
 
 <use figures/NFD.png>
 Package pdftex.def Info: figures/NFD.png used on input line 275.
 (pdftex.def)             Requested size: 110.96687pt x 147.92729pt.
- <figures/NFDConfirm.png, id=655, 1541.76pt x 2055.68pt>
+ <figures/NFDConfirm.png, id=658, 1541.76pt x 2055.68pt>
 File: figures/NFDConfirm.png Graphic file (type png)
 
 <use figures/NFDConfirm.png>
 Package pdftex.def Info: figures/NFDConfirm.png used on input line 282.
 (pdftex.def)             Requested size: 110.96687pt x 147.92729pt.
- <figures/NFND.png, id=656, 1541.76pt x 2055.68pt>
+ <figures/NFND.png, id=659, 1541.76pt x 2055.68pt>
 File: figures/NFND.png Graphic file (type png)
 
 <use figures/NFND.png>
@@ -896,14 +896,14 @@ Package pdftex.def Info: figures/NFND.png used on input line 297.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43 <./figures/FND.png> <./figures/NFD.png> <./figures/NFDConfirm.png>] [44 <.
-/figures/NFND.png>] <figures/repetition.png, id=676, 846.16125pt x 993.7125pt>
+/figures/NFND.png>] <figures/repetition.png, id=679, 846.16125pt x 993.7125pt>
 File: figures/repetition.png Graphic file (type png)
 
 <use figures/repetition.png>
 Package pdftex.def Info: figures/repetition.png used on input line 334.
 (pdftex.def)             Requested size: 221.93375pt x 260.63358pt.
 
-<figures/ffRepetitions.png, id=678, 992.70876pt x 544.0325pt>
+<figures/ffRepetitions.png, id=681, 992.70876pt x 544.0325pt>
 File: figures/ffRepetitions.png Graphic file (type png)
 
 <use figures/ffRepetitions.png>
@@ -925,45 +925,45 @@ Chapter 5.
 
 
 ] [52] [53]
-<figures/ffmin.jpg, id=732, 2018.54124pt x 1231.60126pt>
+<figures/ffmin.jpg, id=741, 2018.54124pt x 1231.60126pt>
 File: figures/ffmin.jpg Graphic file (type jpg)
 
 <use figures/ffmin.jpg>
-Package pdftex.def Info: figures/ffmin.jpg used on input line 113.
+Package pdftex.def Info: figures/ffmin.jpg used on input line 124.
 (pdftex.def)             Requested size: 147.95206pt x 90.26132pt.
- <figures/ffmax.jpg, id=733, 2268.475pt x 1302.8675pt>
+ <figures/ffmax.jpg, id=742, 2268.475pt x 1302.8675pt>
 File: figures/ffmax.jpg Graphic file (type jpg)
 
 <use figures/ffmax.jpg>
-Package pdftex.def Info: figures/ffmax.jpg used on input line 120.
+Package pdftex.def Info: figures/ffmax.jpg used on input line 131.
 (pdftex.def)             Requested size: 147.95206pt x 84.96768pt.
  [54 <./figures/ffmin.jpg> <./figures/ffmax.jpg>]
-<figures/participantAge.png, id=743, 1068.99374pt x 846.16125pt>
+<figures/participantAge.png, id=751, 1068.99374pt x 846.16125pt>
 File: figures/participantAge.png Graphic file (type png)
 
 <use figures/participantAge.png>
-Package pdftex.def Info: figures/participantAge.png used on input line 195.
+Package pdftex.def Info: figures/participantAge.png used on input line 206.
 (pdftex.def)             Requested size: 320.70059pt x 253.85033pt.
  [55]
-<figures/participantGender.png, id=750, 972.63374pt x 562.1pt>
+<figures/participantGender.png, id=758, 972.63374pt x 562.1pt>
 File: figures/participantGender.png Graphic file (type png)
 
 <use figures/participantGender.png>
-Package pdftex.def Info: figures/participantGender.png used on input line 204.
+Package pdftex.def Info: figures/participantGender.png used on input line 215.
 (pdftex.def)             Requested size: 291.79237pt x 168.6313pt.
  [56 <./figures/participantAge.png> <./figures/participantGender.png>]
-<figures/experienceTouch.png, id=760, 1194.4625pt x 662.475pt>
+<figures/experienceTouch.png, id=768, 1194.4625pt x 662.475pt>
 File: figures/experienceTouch.png Graphic file (type png)
 
 <use figures/experienceTouch.png>
-Package pdftex.def Info: figures/experienceTouch.png used on input line 215.
+Package pdftex.def Info: figures/experienceTouch.png used on input line 226.
 (pdftex.def)             Requested size: 358.3415pt x 198.74403pt.
 
-<figures/experienceTablet.png, id=761, 1187.43625pt x 647.41875pt>
+<figures/experienceTablet.png, id=769, 1187.43625pt x 647.41875pt>
 File: figures/experienceTablet.png Graphic file (type png)
 
 <use figures/experienceTablet.png>
-Package pdftex.def Info: figures/experienceTablet.png used on input line 222.
+Package pdftex.def Info: figures/experienceTablet.png used on input line 233.
 (pdftex.def)             Requested size: 356.23363pt x 194.22711pt.
  [57 <./figures/experienceTouch.png> <./figures/experienceTablet.png>]) [58]
 Chapter 6.
@@ -971,110 +971,110 @@ Chapter 6.
 
 
 ]
-<figures/meanTotalTime.jpeg, id=780, 833.1125pt x 526.96875pt>
+<figures/meanTotalTime.jpeg, id=788, 833.1125pt x 526.96875pt>
 File: figures/meanTotalTime.jpeg Graphic file (type jpg)
 
 <use figures/meanTotalTime.jpeg>
-Package pdftex.def Info: figures/meanTotalTime.jpeg used on input line 34.
+Package pdftex.def Info: figures/meanTotalTime.jpeg used on input line 37.
 (pdftex.def)             Requested size: 369.88582pt x 233.96562pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [60 <./figures/meanTotalTime.jpeg>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
  [61] [62]
-<figures/meanOffset.jpeg, id=797, 839.135pt x 644.4075pt>
+<figures/meanOffset.jpeg, id=805, 839.135pt x 644.4075pt>
 File: figures/meanOffset.jpeg Graphic file (type jpg)
 
 <use figures/meanOffset.jpeg>
-Package pdftex.def Info: figures/meanOffset.jpeg used on input line 126.
+Package pdftex.def Info: figures/meanOffset.jpeg used on input line 129.
 (pdftex.def)             Requested size: 369.88582pt x 284.05148pt.
  [63 <./figures/meanOffset.jpeg>]
-<figures/learningCurveTotal.jpeg, id=808, 628.3475pt x 502.87875pt>
+<figures/learningCurveTotal.jpeg, id=816, 628.3475pt x 502.87875pt>
 File: figures/learningCurveTotal.jpeg Graphic file (type jpg)
 
 <use figures/learningCurveTotal.jpeg>
-Package pdftex.def Info: figures/learningCurveTotal.jpeg used on input line 211
+Package pdftex.def Info: figures/learningCurveTotal.jpeg used on input line 214
 .
 (pdftex.def)             Requested size: 166.44748pt x 133.20851pt.
 
-<figures/learningCurve.jpeg, id=809, 635.37375pt x 541.02126pt>
+<figures/learningCurve.jpeg, id=817, 635.37375pt x 541.02126pt>
 File: figures/learningCurve.jpeg Graphic file (type jpg)
 
 <use figures/learningCurve.jpeg>
-Package pdftex.def Info: figures/learningCurve.jpeg used on input line 218.
+Package pdftex.def Info: figures/learningCurve.jpeg used on input line 221.
 (pdftex.def)             Requested size: 166.44748pt x 141.72714pt.
  [64] [65 <./figures/learningCurveTotal.jpeg> <./figures/learningCurve.jpeg>]
-<figures/learningCurveOffset.jpeg, id=824, 759.83875pt x 617.30624pt>
+<figures/learningCurveOffset.jpeg, id=832, 759.83875pt x 617.30624pt>
 File: figures/learningCurveOffset.jpeg Graphic file (type jpg)
 
 <use figures/learningCurveOffset.jpeg>
-Package pdftex.def Info: figures/learningCurveOffset.jpeg used on input line 27
-8.
+Package pdftex.def Info: figures/learningCurveOffset.jpeg used on input line 28
+1.
 (pdftex.def)             Requested size: 369.88582pt x 300.50464pt.
 
 Underfull \vbox (badness 1742) has occurred while \output is active []
 
  [66 <./figures/learningCurveOffset.jpeg>]
-<figures/meanReentries.jpeg, id=834, 821.0675pt x 626.34pt>
+<figures/meanReentries.jpeg, id=842, 821.0675pt x 626.34pt>
 File: figures/meanReentries.jpeg Graphic file (type jpg)
 
 <use figures/meanReentries.jpeg>
-Package pdftex.def Info: figures/meanReentries.jpeg used on input line 333.
+Package pdftex.def Info: figures/meanReentries.jpeg used on input line 336.
 (pdftex.def)             Requested size: 328.42119pt x 250.53156pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
 [68 <./figures/meanReentries.jpeg>]
-<figures/meanRetouches.jpeg, id=848, 659.46375pt x 515.9275pt>
+<figures/meanRetouches.jpeg, id=855, 659.46375pt x 515.9275pt>
 File: figures/meanRetouches.jpeg Graphic file (type jpg)
 
 <use figures/meanRetouches.jpeg>
-Package pdftex.def Info: figures/meanRetouches.jpeg used on input line 361.
+Package pdftex.def Info: figures/meanRetouches.jpeg used on input line 364.
 (pdftex.def)             Requested size: 263.78082pt x 206.36734pt.
 
-<figures/meanSmoothness.png, id=851, 561.09625pt x 407.5225pt>
+<figures/meanSmoothness.png, id=858, 561.09625pt x 407.5225pt>
 File: figures/meanSmoothness.png Graphic file (type png)
 
 <use figures/meanSmoothness.png>
-Package pdftex.def Info: figures/meanSmoothness.png used on input line 383.
+Package pdftex.def Info: figures/meanSmoothness.png used on input line 386.
 (pdftex.def)             Requested size: 147.95206pt x 107.45195pt.
 
-<figures/meanSpeed.png, id=852, 561.09625pt x 373.395pt>
+<figures/meanSpeed.png, id=859, 561.09625pt x 373.395pt>
 File: figures/meanSpeed.png Graphic file (type png)
 
 <use figures/meanSpeed.png>
-Package pdftex.def Info: figures/meanSpeed.png used on input line 390.
+Package pdftex.def Info: figures/meanSpeed.png used on input line 393.
 (pdftex.def)             Requested size: 147.95206pt x 98.4535pt.
 
-<figures/meanFFatigue.png, id=853, 561.09625pt x 366.36874pt>
+<figures/meanFFatigue.png, id=860, 561.09625pt x 366.36874pt>
 File: figures/meanFFatigue.png Graphic file (type png)
 
 <use figures/meanFFatigue.png>
-Package pdftex.def Info: figures/meanFFatigue.png used on input line 397.
+Package pdftex.def Info: figures/meanFFatigue.png used on input line 400.
 (pdftex.def)             Requested size: 147.95206pt x 96.60089pt.
 
-<figures/meanWFatigue.png, id=854, 561.09625pt x 351.3125pt>
+<figures/meanWFatigue.png, id=861, 561.09625pt x 351.3125pt>
 File: figures/meanWFatigue.png Graphic file (type png)
 
 <use figures/meanWFatigue.png>
-Package pdftex.def Info: figures/meanWFatigue.png used on input line 404.
+Package pdftex.def Info: figures/meanWFatigue.png used on input line 407.
 (pdftex.def)             Requested size: 147.95206pt x 92.63098pt.
 
-<figures/meanGComfort.png, id=855, 561.09625pt x 333.245pt>
+<figures/meanGComfort.png, id=862, 561.09625pt x 333.245pt>
 File: figures/meanGComfort.png Graphic file (type png)
 
 <use figures/meanGComfort.png>
-Package pdftex.def Info: figures/meanGComfort.png used on input line 411.
+Package pdftex.def Info: figures/meanGComfort.png used on input line 414.
 (pdftex.def)             Requested size: 147.95206pt x 87.86711pt.
 
-<figures/meanOverall.png, id=856, 561.09625pt x 332.24126pt>
+<figures/meanOverall.png, id=863, 561.09625pt x 332.24126pt>
 File: figures/meanOverall.png Graphic file (type png)
 
 <use figures/meanOverall.png>
-Package pdftex.def Info: figures/meanOverall.png used on input line 418.
+Package pdftex.def Info: figures/meanOverall.png used on input line 421.
 (pdftex.def)             Requested size: 147.95206pt x 87.60245pt.
 
 
@@ -1111,226 +1111,226 @@ Appendix A.
 
 
 ]
-<appendix/InstructionsFatFinger.pdf, id=963, page=1, 614.295pt x 794.97pt>
+<appendix/InstructionsFatFinger.pdf, id=970, page=1, 614.295pt x 794.97pt>
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 369.88582pt x 478.68391pt.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page1 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [82 <./appendix/InstructionsFatFinger.pdf>]
-<appendix/InstructionsFatFinger.pdf, id=994, page=2, 614.295pt x 794.97pt>
+<appendix/InstructionsFatFinger.pdf, id=1001, page=2, 614.295pt x 794.97pt>
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page2 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page2 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/InstructionsFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/InstructionsFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/InstructionsFatFinger.pdf, page2 used on inpu
 t line 3.
-(pdftex.def)             Requested size: 994.69315pt x 1287.24998pt.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [83 <./appendix/InstructionsFatFinger.pdf>]
 Appendix B.
 [84
 
 ]
-<appendix/DemographicFatFinger.pdf, id=1037, page=1, 597.50786pt x 845.04686pt>
+<appendix/DemographicFatFinger.pdf, id=1044, page=1, 597.50786pt x 845.04686pt>
 File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
 <use appendix/DemographicFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
  line 8.
-(pdftex.def)             Requested size: 369.88582pt x 523.12419pt.
-File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
-
-<use appendix/DemographicFatFinger.pdf, page 1>
-Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
- line 8.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/DemographicFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
  line 8.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/DemographicFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
  line 8.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/DemographicFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
  line 8.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+File: appendix/DemographicFatFinger.pdf Graphic file (type pdf)
+
+<use appendix/DemographicFatFinger.pdf, page 1>
+Package pdftex.def Info: appendix/DemographicFatFinger.pdf, page1 used on input
+ line 8.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [85 <./appendix/DemographicFatFinger.pdf>]
 Appendix C.
 [86
 
 ]
-<appendix/AssessmentFatFinger.pdf, id=1096, page=1, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1103, page=1, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input 
 line 13.
-(pdftex.def)             Requested size: 369.88582pt x 523.12419pt.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 1>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page1 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [87 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1134, page=2, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1141, page=2, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page2 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page2 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 2>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page2 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [88 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1140, page=3, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1147, page=3, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 3>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page3 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 3>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page3 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 3>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page3 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [89 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1146, page=4, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1153, page=4, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 4>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page4 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 4>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page4 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 4>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page4 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [90 <./appendix/AssessmentFatFinger.pdf>]
-<appendix/AssessmentFatFinger.pdf, id=1152, page=5, 597.50786pt x 845.04686pt>
+<appendix/AssessmentFatFinger.pdf, id=1159, page=5, 597.50786pt x 845.04686pt>
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 5>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page5 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 5>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page5 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: appendix/AssessmentFatFinger.pdf Graphic file (type pdf)
 
 <use appendix/AssessmentFatFinger.pdf, page 5>
 Package pdftex.def Info: appendix/AssessmentFatFinger.pdf, page5 used on input 
 line 13.
-(pdftex.def)             Requested size: 965.42285pt x 1365.3838pt.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [91 <./appendix/AssessmentFatFinger.pdf>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (./FatFingerReport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `FatFingerReport.out' has not changed.
 (rerunfilecheck)             Checksum: 7C71B4787C98176A8FE592E97A1520A6;3218.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 11057 strings out of 493315
- 164098 string characters out of 6137905
+ 11063 strings out of 493315
+ 164166 string characters out of 6137905
  285737 words of memory out of 5000000
- 14063 multiletter control sequences out of 15000+600000
+ 14064 multiletter control sequences out of 15000+600000
  9624 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,18n,58p,1350b,1190s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,18n,58p,1350b,1190s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -1348,10 +1348,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on FatFingerReport.pdf (91 pages, 5055715 bytes).
+Output written on FatFingerReport.pdf (91 pages, 5056323 bytes).
 PDF statistics:
- 1281 PDF objects out of 1440 (max. 8388607)
- 1050 compressed objects within 11 object streams
- 234 named destinations out of 1000 (max. 500000)
+ 1289 PDF objects out of 1440 (max. 8388607)
+ 1058 compressed objects within 11 object streams
+ 239 named destinations out of 1000 (max. 500000)
  617 words of extra memory for PDF output out of 10000 (max. 10000000)
 

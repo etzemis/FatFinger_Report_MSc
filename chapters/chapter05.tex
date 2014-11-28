@@ -34,21 +34,36 @@ After having filled in the Demographic information form, we are ready to move to
 \subsection{Demographic Information}
 \label{sec:demographic}
 
-Demographic Information form is used to collect several basic information about the participant of this study. However, to ensure confidentiality we do not ask them to fill in their  name, surname or address. The fields that need to filled in by the user are:
+Demographic Information form is used to collect several basic information about the participant of this study. However, to ensure confidentiality we do not ask them to fill in their  name, surname or address. The fields that need to filled are presented in table \ref{tab:demoPersonalFields}.
 
 
-\begin{itemize}
-	\item \textbf{Age}. Age is based on the year of birth, and not on the actual date. 
-	\item \textbf{Gender}. Male or Female.
-	\item \textbf{Optical Aid}. None, Glasses, or contact lenses. 
-	\item \textbf{Handedness}. Right, Left or Ambidextrous.
-\end{itemize}
+% \begin{itemize}
+% 	\item \textbf{Age}. Age is based on the year of birth, and not on the actual date. 
+% 	\item \textbf{Gender}. Male or Female.
+% 	\item \textbf{Optical Aid}. None, Glasses, or contact lenses. 
+% 	\item \textbf{Handedness}. Right, Left or Ambidextrous.
+% \end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l}
+\textbf{Age} & Age is based on the year of birth, and not on the actual date \\
+\hline
+\textbf{Gender} & Male or Female \\
+\hline
+\textbf{Optical Aid} & None, Glasses, or contact lenses \\
+\hline
+\textbf{Handedness} & Right, Left or Ambidextrous \\
+\end{tabular}
+\caption{Demographic information form - Personal fields}
+\label{tab:demoPersonalFields}
+\end{table}
 
 According to these fields we can easily categorize the participants into corresponding groups, and export meaningful results (see Chapter 6).
 
 Finally we ask users to rate their experience in using touch-based mobile devices, and also in using tablet devices. Ranking is based on a 5 point rate scale; very inexperienced (1) to very experienced (5). We also query them if they own, or at least have used a tablet devices and a touch-based device before. In particular:
 
-\begin{itemize}
+\begin{enumerate}
 	\item \textbf{Do you own a tablet device (e.g. iPad)?}
 
 	\emph{Yes - No}
@@ -61,7 +76,7 @@ Finally we ask users to rate their experience in using touch-based mobile device
 	\item \textbf{How do you rate your experience with tablet devices?}
 
 	\emph{Highly inexperienced (1) - Highly experienced (5)}
-\end{itemize}
+\end{enumerate}
 
 
 The printed version of the Demographic information form can be found in Appendix \ref{demographicFatFinger}, with all the information included. 
@@ -82,13 +97,9 @@ This section is devoted on the finger calibration process. Calibration is a very
 There are many possible ways a user can calibrate his finger, or restated, each finger can be calibrated with more than one ways. Calibration is a very subjective parameter. Each participant is allowed to calibrate his finger the way he feels more comfortable. During the calibration process we simply let the system know which are our desired minimum and maximum contact area values. 
 
 
-There are two (2)  basic techniques for alternating the contact size of the on-screen covered area.
+There are two basic techniques for alternating the contact size of the on-screen covered area. The first is to \textbf{alternate the \textit{angle} of the finger}. For this approach, you need to touch your finger almost vertically to the screen to set the minimum contact area size, and move towards a horizontal position for the maximum desired value. Please note that the maximum and minimum values are not feasible ones, but just the preferred ones. If a user wants to perform smaller movements with his hand then he needs to adjusts the values to have a shorter range. However if someone wants to perform longer and bigger movements, they he is welcome to set the minimum and maximum values accordingly. 
+The other possibility is to \textbf{alternate the \textit{pressure} applied}.  Apply no pressure to set the minimum desired contact area and enough pressure to set the maximum desired level. The same rules for the desired and possible values apply here too.
 
-\begin{itemize}
-	\item \textbf{Alternate finger's \textit{angle}}. For this approach, you need to touch your finger almost vertically to the screen to set the minimum contact area size, and move towards a horizontal position for the maximum desired value. Please note that the maximum and minimum values are not feasible ones, but just the preferred ones. If a user wants to perform smaller movements with his hand then he needs to adjusts the values to have a shorter range. However if someone wants to perform longer and bigger movements, they he is welcome to set the minimum and maximum values accordingly.
-
-	\item \textbf{alternate the \textit{pressure} applied}.  Apply no pressure to set the minimum desired contact area and enough pressure the set the maximum desired point. The same rules for the desired and possible values apply here too.
-\end{itemize}
 
 
 However some guidelines were given to them, to help them perform it properly.
@@ -96,7 +107,7 @@ However some guidelines were given to them, to help them perform it properly.
 	\item Touch the screen softly with a medium contact size. This movement should be as natural as possible. No need to apply pressure or tension at all.
 	\item Move your finger to the desired minimum level. Again there is no need to apply any pressure on the device. The participant should be as relaxed as possible.
 	\item Move your finger to the desired maximum level. The allowed part of the finger that can be used as contact area is delimited by first joint point. 
-	\item From this maximum position please lift your finger. 
+	\item From this maximum position, please lift your finger. 
 \end{enumerate}
 
 After performing those steps, the participant may proceed to the visualization screen. In this view, he is able to play around with the interface which is calibrated according to the previously acquired input values. When he fills confident that the calibration is well responding to his finger movement then he may proceed to the experiment. Otherwise, he can calibrate again as many times he wants, until he is completely satisfied with the visualization outcome.

@@ -1,5 +1,5 @@
 
-Fat Finger is an application that is developed and targeted for Apple tablets devices. It runs on a standard Apple iPad mini with Retina Display device, which runs the iOS 7 (version 7.1.1) operating system. The device has the following specifications:
+Fat Finger is an application that operates on a standard Apple iPad mini with retina display device, which runs the iOS 7 (version 7.1.1) operating system. The device has the following specifications:
 
 
 \begin{table}[H]
@@ -25,8 +25,8 @@ In particular, since iOS 4, dimensions are measured in \textbf{“points”} ins
 
 
 \begin{itemize}
-    \item \textbf{iPad 1} - 768 x 1024 pixels (i.e. a scale factor of 1.0)
-    \item \textbf{iPad Air} - 1536 x 2048 pixels (i.e. a scale factor of 2.0)
+    \item \textbf{iPad 1} - 768 x 1024 pixels (scale factor of 1.0)
+    \item \textbf{iPad Air} - 1536 x 2048 pixels (scale factor of 2.0)
     \item \textbf{iPad Mini - Retina Display} - 1536 x 2048 pixels (scale factor of 2.0)
  \end{itemize}
 
@@ -214,7 +214,7 @@ At this point, the values for the two basic variables \textbf{Target} and \textb
 \begin{itemize}
 	\item \textbf{Discrete}. This only relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}), so the formatting of the targets. In this type, targets are discrete, meaning that Region 2 is divided in N buckets, but only one of them is activated. The activated bucket is coloured in red and acts as the target for this trial. All other inactive buckets are coloured in gray. 
 
-	\item \textbf{Continuous}. This also relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}) exclusively. In this type, Region 2 is not divided into buckets, at least visible. We think in term of targets, but we do not present them graphically. The target is just one small red line (a bucket with 1 degree range). However it might be impossible for the user to select such a tiny target, so we offer an offset area which is delimited with two yellow lines. The position of the target is not random. As I mentioned before, we still think in term of buckets. But instead of considering the whole bucket as a target, we just randomly select a small region inside that bucket, and draw the red line there. Thus, we have the same amount of trials as in the Discrete type.
+	\item \textbf{Continuous}. This also relates to Region 2 (Figure \ref{fig:FFBasicTrialInterface}) exclusively. In this type, Region 2 is not divided into buckets; at least visible ones. We think in term of targets, but we do not present them graphically. The target is just one small red line (a bucket with 1 degree range). However it might be impossible for the user to select such a tiny target, so we offer an offset area which is delimited with two yellow lines. The position of the target is not random. As I mentioned before, we still think in term of buckets. But instead of considering the whole bucket as a target, we just randomly select a small region inside that bucket, and draw the red line there. Thus, we have the same amount of trials as in the Discrete type.
 
 	\item \textbf{Feedback} is related with Region 3 (Figure \ref{fig:FFBasicTrialInterface}). In this type, Region 3 is visible, meaning that we have continuous feedback while we are moving our finger. In order to select a target the user has to perform the Dwell technique. Thus, keep the edge of the blue line (Region 3) inside the red bucket for at least one second. Then a short sound confirms the selection and the trial is dismissed. Summarizing, the mission is: 
 
@@ -227,7 +227,7 @@ At this point, the values for the two basic variables \textbf{Target} and \textb
 	\emph{Touch the screen, alternate the contact area and make a prediction on where the blue line should be to hit the target, lift the finger when you are on the preferred contact size, and finally observe the outcome - feedback}.
 \end{itemize}
 
-We have now explained and introduced all the necessary background, and we are ready to present the Interface of the 4 categories of trials as stated in Table \ref{tab:ffTrialCateg}.
+We have now explained, and introduced all the necessary background, and we are ready to present the interface of the 4 categories of trials, as stated in Table \ref{tab:ffTrialCateg}.
 
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%
@@ -236,7 +236,7 @@ We have now explained and introduced all the necessary background, and we are re
 \subsection{Feedback \& Discrete Targeting}
 
 
-In this type of trials, we can understand that the targets will be discrete and there will also be feedback on our input. Figure \ref{fig:FD} presents the interface of this type. As we can see both Region 2 and 3 (Figure \ref{fig:FFBasicTrialInterface}) exist. Since we have \emph{Discrete} targets, Region 2 is separated in $n$ buckets, all with equal size. The target is the one coloured in red, and all others are inactive and coloured in gray. On the other hand, \emph{Feedback} keyword is mentioned too, which means that the blue circle (Region 3) exists. The movement of the blue region corresponds to the movement of our hand. To accomplish this trial, the participant needs to perform the Dwell selection technique.
+In this type of trials, we can understand that the targets will be discrete and there feedback on our input will be provided too. Figure \ref{fig:FD} presents the interface of this type. As we can see both Region 2 and 3 (Figure \ref{fig:FFBasicTrialInterface}) exist. Since we have \emph{Discrete} targets, Region 2 is separated in $n$ buckets, all with equal size. The target is the one coloured in red, and all others are inactive and coloured in gray. On the other hand, \emph{Feedback} keyword is mentioned too, which means that the blue circle (Region 3) exists. The movement of the blue region corresponds to the movement of our hand. To accomplish this trial, the participant needs to perform the Dwell selection technique.
 
 \begin{figure}[H]
 \centering
@@ -516,10 +516,12 @@ Core Data does not provide a specific output data format, neither has an automat
 
 \begin{itemize}
 	\item Each line represents a case. In other words, each line represents the data collected for a specific trial of a user.
-	\item Each case can be uniquely identified by the combination of the usedID and trialID parameters.
+	\item Each case can be uniquely identified by the combination of the userID and trialID parameters.
 	\item Each user performed 612 trials. Those he will be presented by 612 unique cases.
 	\item Each variable (n, targets, userID, totalTime etc.) is represented by a column.
 \end{itemize}
+
+
 
 
 
